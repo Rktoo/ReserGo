@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Reservation;
 use App\Models\Service;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -41,12 +42,12 @@ class ReservationController extends Controller
         }
 
         $existingReservation = Reservation::where('service_id', $validated['service_id'])
-            ->where('user_id', Auth::id())
-            ->where('reservation_date', $validated['reservation_date'])
+            ->where('user_id', $userId)
+            // ->whereDate('reservation_date', Carbon::parse($validated['reservation_date'])->format('Y-m-d'))
             ->first();
 
         if ($existingReservation) {
-            return back()->withErrors(['reservation_date' => 'Vous avez déjà réservé ce service à cette date.']);
+            return back()->withErrors(['reservation_date' => 'Vous avez déjà réservé ce service.']);
         }
 
         Reservation::create([

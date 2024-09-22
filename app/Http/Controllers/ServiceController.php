@@ -23,7 +23,7 @@ class ServiceController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
-            'price' => 'string'
+            'price' => 'required|string'
         ]);
 
         Service::create($request->only('name', 'description', 'price'));

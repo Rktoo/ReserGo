@@ -18,5 +18,8 @@ Route::get('reservations/create/{serviceId?}', [ReservationController::class, 'c
 Route::get('/login', function () {
     return view('auth.login');
 })->name('login');
+Route::get('/register', function () {
+    return view('auth.register');
+})->name('register');
 route::view('/about', 'pages.about')->name('about');
 route::view('/contact', 'pages.contact')->name('contact');

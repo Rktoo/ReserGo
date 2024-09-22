@@ -27,6 +27,9 @@
         class="fixed bottom-0 left-0 w-full py-2 text-center border-t-2 border-white bg-gradient-to-tr from-blue-400 to-blue-700 text-white">
         <p class="text-gray-50">&copy; {{ date('Y') }} ReserGo. Tous droits réservés.</p>
     </footer>
+
+    {{-- <script src="{{ asset('form.js') }}"></script> --}}
+    @stack('scripts')
 </body>
 
 </html>

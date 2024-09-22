@@ -11,7 +11,8 @@
                     required>
                     <option value="-1">Sélectionner votre service</option>
                     @foreach ($services as $service)
-                        <option value="{{ $service->id }}">{{ $service->name }}</option>
+                        <option value="{{ $service->id }}" {{ old('service_id') == $service->id ? 'selected' : '' }}>
+                            {{ $service->name }}</option>
                     @endforeach
                 </select>
                 @error('service_id')
@@ -20,7 +21,7 @@
             </div>
             <div class="mb-4">
                 <label for="date" class="block text-sm font-medium text-gray-700">Date de réservation</label>
-                <input type="datetime-local" name="reservation_date" id="date"
+                <input type="datetime-local" name="reservation_date" id="date" value="{{ old('reservation_date') }}"
                     class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" required>
                 @error('reservation_date')
                     <span class="text-red-500 text-sm">{{ $message }}</span>

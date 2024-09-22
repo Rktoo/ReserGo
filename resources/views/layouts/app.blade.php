@@ -19,7 +19,7 @@
                 </a>
                 <ul class="flex justify-end items-center space-x-0 mr-2">
                     @auth
-                        <li><a {{-- href="{{ route('login') }}"  --}} class="px-2">Dashboard</a></li>
+                        <li><a href="{{ route('dashboard.index') }}" class="px-2">Dashboard</a></li>
                         <li>
                             <form action="{{ route('logout') }}" method="post">
                                 @csrf
@@ -38,7 +38,7 @@
         </div>
     </header>
     <div class="container mx-auto mb-4 px-4 flex flex-col">
-        <main class="mt-1">
+        <main class="max-w-6xl w-full mx-auto px-10 mt-1">
             @yield('content')
         </main>
     </div>

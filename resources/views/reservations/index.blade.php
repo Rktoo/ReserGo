@@ -20,7 +20,7 @@
                     </div>
                     <div class="flex flex-row max-sm:flex-col justify-start max-sm:justify-center items-center gap-1 ">
                         <p class="text-sm font-thin">By</p>
-                        <p class="text-blue-400">{{ $reservation->customer_name }}</p>
+                        <p class="text-blue-400">{{ $reservation->user->name }}</p>
                     </div>
                 </div>
             @endforeach

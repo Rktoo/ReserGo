@@ -13,6 +13,15 @@
         <form method="POST" action="{{ route('register') }}">
             @csrf
             <div class="mb-4">
+                <label for="name" class="block text-sm font-medium text-gray-700">Nom</label>
+                <input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus
+                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Votre nom">
+                @error('name')
+                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                @enderror
+            </div>
+            <div class="mb-4">
                 <label for="email" class="block text-sm font-medium text-gray-700">Adresse e-mail</label>
                 <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus
                     class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
@@ -33,11 +42,11 @@
             </div>
 
             <div class="mb-4">
-                <label for="confirm_password" class="block text-sm font-medium text-gray-700">Confirmation</label>
-                <input id="confirm_password" type="password" name="confirm_password" required
+                <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Confirmation</label>
+                <input id="password_confirmation" type="password" name="password_confirmation" required
                     class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                     placeholder="Confirmer le mot de passe">
-                @error('password')
+                @error('password_confirmation')
                     <span class="text-red-500 text-sm">{{ $message }}</span>
                 @enderror
             </div>

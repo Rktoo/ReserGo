@@ -17,9 +17,21 @@
                 <a href="/" class="ml-4 col-span-1">
                     <h1 class="text-3xl max-sm:text-lg text-center font-semibold mr-4">ReserGo </h1>
                 </a>
-                <ul class="flex justify-end items-center space-x-2 mr-2">
-                    <li><a href="{{ route('login') }}" class="px-2">Login</a></li>
-                    <li><a href="{{ route('register') }}" class="px-2">Register</a></li>
+                <ul class="flex justify-end items-center space-x-0 mr-2">
+                    @auth
+                        <li><a {{-- href="{{ route('login') }}"  --}} class="px-2">Dashboard</a></li>
+                        <li>
+                            <form action="{{ route('logout') }}" method="post">
+                                @csrf
+                                <button type="submit" class="px-2">Logout</button>
+
+                            </form>
+                        </li>
+                    @endauth
+                    @guest
+                        <li><a href="{{ route('login') }}" class="px-2">Login</a></li>
+                        <li><a href="{{ route('register') }}" class="px-2">Register</a></li>
+                    @endguest
                 </ul>
             </div>
             @include('layouts.navbar')

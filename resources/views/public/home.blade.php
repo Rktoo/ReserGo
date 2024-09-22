@@ -2,6 +2,15 @@
 
 @section('content')
     <div class="py-4">
+        @if ($errors->any())
+            <div class="mb-4 text-red-500">
+                <ul id="errors_">
+                    @foreach ($errors->all() as $error)
+                        <li class="text-center">{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <h1 class="text-3xl font-bold mb-6">Bienvenue sur ReserGo</h1>
         <p class="text-gray-700 mb-8">Réservez vos services facilement en ligne !</p>
 
@@ -21,3 +30,7 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+    <script src="js/errorHandling.js"></script>
+@endpush

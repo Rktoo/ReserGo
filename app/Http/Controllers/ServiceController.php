@@ -4,9 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Controller;
+use App\Http\Middleware\AdminMiddleware;
+use Illuminate\Routing\Controllers\HasMiddleware;
+use Illuminate\Routing\Controllers\Middleware;
 
-class ServiceController extends Controller
+class ServiceController extends Controller implements HasMiddleware
 {
+
+    public static function middleware()
+    {
+        return [new Middleware(AdminMiddleware::class, except: ['index'])];
+    }
     public function index()
     {
         $services = Service::all();

@@ -40,12 +40,21 @@ class ReservationController extends Controller
             return redirect()->route('login')->withErrors('Vous devez être connecté pour réserver.');
         }
 
+        $existingReservation = Reservation::where('service_id', $validated['service_id'])
+            ->where('user_id', Auth::id())
+            ->where('reservation_date', $validated['reservation_date'])
+            ->first();
+
+        if ($existingReservation) {
+            return back()->withErrors(['reservation_date' => 'Vous avez déjà réservé ce service à cette date.']);
+        }
+
         Reservation::create([
             'service_id' => $validated['service_id'],
             'user_id' => $userId,
             'reservation_date' => $validated['reservation_date'],
         ]);
 
-        return redirect()->route('reservations.index')->with('success', 'Réservation effectuée avec succès!');
+        return redirect()->route('dashboard.index')->with('success', 'Réservation effectuée avec succès!');
     }
 }

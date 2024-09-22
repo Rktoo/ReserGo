@@ -11,7 +11,7 @@
             <p class="mb-2"><span class="font-semibold">Email du client:</span> {{ $reservation->user->email }}</p>
         </div>
         <div class="mt-6">
-            <a href="{{ route('dashboard.index') }}" class="text-blue-500 hover:underline">Retour aux
+            <a href="{{ route('dashboard.index') }}" class="text-blue-500 hover:underline">Retour à vos
                 réservations</a>
         </div>
     </div>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+    <div class="">
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mx-2">
             <h1 class="text-2xl max-sm:text-xl mt-2 font-semibold">Vos Réservations</h1>
             <a href="{{ route('reservations.create') }}"

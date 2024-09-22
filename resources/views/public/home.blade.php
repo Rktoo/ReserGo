@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="max-w-7xl mx-auto py-12">
+    <div class="py-4">
         <h1 class="text-3xl font-bold mb-6">Bienvenue sur ReserGo</h1>
         <p class="text-gray-700 mb-8">Réservez vos services facilement en ligne !</p>
 
@@ -13,8 +13,19 @@
                     <p class="text-gray-600">{{ $service->description }}</p>
                     <div class="flex flex-col justify-end">
                         <p class="text-blue-600 font-semibold mt-2">{{ number_format((float) $service->price, 2) }} €</p>
-                        <a href="{{ route('reservations.create', $service->id) }}"
-                            class="text-blue-500 mt-2 inline-block">Réserver ce service</a>
+                        @php
+                            $hasReservation = Auth::user()
+                                ->reservations()
+                                ->where('service_id', $service->id)
+                                ->where('reservation_date', '>', now())
+                                ->exists();
+                        @endphp
+                        @if ($hasReservation)
+                            <p class="text-gray-500 mt-2">Vous avez déjà réservé ce service.</p>
+                        @else
+                            <a href="{{ route('reservations.create', $service->id) }}"
+                                class="text-blue-500 mt-2 inline-block">Réserver ce service</a>
+                        @endif
                     </div>
                 </div>
             @endforeach

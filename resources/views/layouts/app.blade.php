@@ -38,7 +38,7 @@
         </div>
     </header>
     <div class="container mx-auto mb-4 px-4 flex flex-col">
-        <main class="max-w-6xl w-full mx-auto px-10 mt-1">
+        <main class="max-w-6xl w-full mx-auto py-6 sm:px-6 lg:px-8">
             @yield('content')
         </main>
     </div>

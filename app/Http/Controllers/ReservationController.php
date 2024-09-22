@@ -31,10 +31,18 @@ class ReservationController extends Controller
             'service_id' => 'required|exists:services,id|not_in:-1', // Vérifie que le service existe et n'est pas l'option par défaut
             'reservation_date' => 'required|date|after:now', // Date de réservation doit être future
         ]);
+        // dd($validated['reservation_date']);
+        // dd($validated['service_id']);
+        $userId = Auth::id();
+
+        // Vérifiez que l'utilisateur est bien authentifié
+        if (!$userId) {
+            return redirect()->route('login')->withErrors('Vous devez être connecté pour réserver.');
+        }
 
         Reservation::create([
             'service_id' => $validated['service_id'],
-            'user_id' => Auth::id(),
+            'user_id' => $userId,
             'reservation_date' => $validated['reservation_date'],
         ]);
 

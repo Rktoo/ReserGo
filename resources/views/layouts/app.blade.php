@@ -12,9 +12,16 @@
     <header
         class=" flex justify-between items-center gap-2 max-sm:text-xs bg-gradient-to-tr from-blue-400 to-blue-700 text-white ">
         <div class="max-w-6xl w-full mx-auto py-4 px-4 flex flex-col gap-2">
-            <a href="/">
-                <h1 class="text-3xl max-sm:text-lg text-center font-semibold mr-4">ReserGo </h1>
-            </a>
+            <div class="grid  grid-cols-3 justify-between">
+                <div class="col-span-1"></div>
+                <a href="/" class="ml-4 col-span-1">
+                    <h1 class="text-3xl max-sm:text-lg text-center font-semibold mr-4">ReserGo </h1>
+                </a>
+                <ul class="flex justify-end items-center space-x-2 mr-2">
+                    <li><a href="{{ route('login') }}" class="px-2">Login</a></li>
+                    <li><a href="{{ route('register') }}" class="px-2">Register</a></li>
+                </ul>
+            </div>
             @include('layouts.navbar')
         </div>
     </header>

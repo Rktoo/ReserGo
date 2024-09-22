@@ -20,6 +20,6 @@ class AdminMiddleware
             return $next($request);
         }
 
-        return redirect()->route('home')->withErrors('Accès interdit.');
+        return back()->withErrors('Accès interdit.');
     }
 }

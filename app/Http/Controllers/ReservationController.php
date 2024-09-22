@@ -13,9 +13,15 @@ class ReservationController extends Controller
         $reservations = Reservation::with('service')->get();
         return view('reservations.index', compact('reservations'));
     }
-    public function create()
+    public function create(Service $service, $serviceId = null)
     {
         $services = Service::all();
+
+        if ($serviceId) {
+            $service = Service::find($serviceId);
+            return view("reservations.create", compact('service', 'services'));
+        }
+
         return view('reservations.create', compact('services'));
     }
     public function store(Request $request)

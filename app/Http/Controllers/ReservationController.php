@@ -64,4 +64,28 @@ class ReservationController extends Controller
         $reservation = Reservation::findOrFail($id);
         return view('reservations.edit', compact('reservation'));
     }
+
+    public function update(Request $request, $id)
+    {
+        $reservation = Reservation::findOrFail($id);
+        $validated = $request->validate([
+            'reservation_date' => 'required|date|after:now',
+        ]);
+
+        $userId = Auth::id();
+        $existingReservation = Reservation::where('service_id', $reservation->service_id)
+            ->where('user_id', $userId)
+            ->whereDate('reservation_date', Carbon::parse($validated['reservation_date'])->format('Y-m-d'))
+            ->first();
+
+        if ($existingReservation) {
+            return back()->withErrors(['reservation_date' => 'Cette date est déjà réservée.']);
+        }
+
+        $reservation = Reservation::findOrFail($id);
+        $reservation->reservation_date = $validated['reservation_date'];
+        $reservation->save();
+
+        return redirect()->route('dashboard.index')->with('success', 'Réservation mise à jour avec succès!');
+    }
 }

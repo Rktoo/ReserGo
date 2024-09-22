@@ -9,9 +9,10 @@
             </p>
             <p class="mb-2"><span class="font-semibold">Nom du client:</span> {{ $reservation->user->name }}</p>
             <p class="mb-2"><span class="font-semibold">Email du client:</span> {{ $reservation->user->email }}</p>
+            <a href="{{ route('reservations.edit', $reservation->id) }}" class="text-blue-500 hover:underline">Modifier</a>
         </div>
         <div class="mt-6">
-            <a href="{{ route('dashboard.index') }}" class="text-blue-500 hover:underline">Retour à vos
+            <a href="{{ route('dashboard.index', $reservation->id) }}" class="text-blue-500 hover:underline">Retour à vos
                 réservations</a>
         </div>
     </div>

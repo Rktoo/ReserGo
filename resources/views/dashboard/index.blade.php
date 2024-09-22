@@ -8,6 +8,8 @@
                 <li class="flex justify-between items-center border-b border-gray-200 py-2">
                     <div class="flex flex-col">
                         <span class="font-medium">{{ $reservation->service->name }}</span>
+                        <p class="max-lg:w-10/12 my-2 transition-all duration-200 ease-in-out">
+                            {{ $reservation->service->description }}</p>
                         <div>
                             <span class="text-gray-600">{{ $reservation->reservation_date->format('d-m-Y') }}</span>
                             <span class="text-gray-600">à {{ $reservation->reservation_date->format('H:i') }}h</span>
@@ -33,8 +35,8 @@
         <ul class="bg-white/50 shadow-md rounded-lg p-4">
             @forelse ($pastReservations as $reservation)
                 <li class="flex justify-between items-center border-b border-gray-200 py-2">
-                    <div>
-                        <span class="font-medium">{{ $reservation->service->name }}</span> -
+                    <div class="flex flex-col">
+                        <span class="font-medium">{{ $reservation->service->name }}</span>
                         <span class="text-gray-600">{{ $reservation->reservation_date }}</span>
                     </div>
                     <div>

@@ -29,6 +29,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard.index');
     Route::get('/dashboard/reservations/{reservation}', [UserDashboardController::class, 'show'])->name('dashboard.reservations.show');
     Route::delete('/dashboard/reservations/{reservation}', [UserDashboardController::class, 'destroy'])->name('dashboard.reservations.destroy');
+    Route::get('/reservations/{id}/edit', [ReservationController::class, 'edit'])->name('reservations.edit');
+    Route::put('/reservations/{id}', [ReservationController::class, 'update'])->name('reservations.update');
 });
 route::view('/about', 'pages.about')->name('about');
 route::view('/contact', 'pages.contact')->name('contact');

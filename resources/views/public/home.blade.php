@@ -13,19 +13,8 @@
                     <p class="text-gray-600">{{ $service->description }}</p>
                     <div class="flex flex-col justify-end">
                         <p class="text-blue-600 font-semibold mt-2">{{ number_format((float) $service->price, 2) }} €</p>
-                        @php
-                            $hasReservation = Auth::user()
-                                ->reservations()
-                                ->where('service_id', $service->id)
-                                ->where('reservation_date', '>', now())
-                                ->exists();
-                        @endphp
-                        @if ($hasReservation)
-                            <p class="text-gray-500 mt-2">Vous avez déjà réservé ce service.</p>
-                        @else
-                            <a href="{{ route('reservations.create', $service->id) }}"
-                                class="text-blue-500 mt-2 inline-block">Réserver ce service</a>
-                        @endif
+                        <a href="{{ route('reservations.create', $service->id) }}"
+                            class="text-blue-500 mt-2 inline-block">Réserver ce service</a>
                     </div>
                 </div>
             @endforeach

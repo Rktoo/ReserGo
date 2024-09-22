@@ -43,11 +43,11 @@ class ReservationController extends Controller
 
         $existingReservation = Reservation::where('service_id', $validated['service_id'])
             ->where('user_id', $userId)
-            // ->whereDate('reservation_date', Carbon::parse($validated['reservation_date'])->format('Y-m-d'))
+            ->whereDate('reservation_date', Carbon::parse($validated['reservation_date'])->format('Y-m-d'))
             ->first();
 
         if ($existingReservation) {
-            return back()->withErrors(['reservation_date' => 'Vous avez déjà réservé ce service.']);
+            return back()->withErrors(['reservation_date' => 'Vous avez déjà réservé ce service à cette date.']);
         }
 
         Reservation::create([
@@ -57,5 +57,11 @@ class ReservationController extends Controller
         ]);
 
         return redirect()->route('dashboard.index')->with('success', 'Réservation effectuée avec succès!');
+    }
+
+    public function edit($id)
+    {
+        $reservation = Reservation::findOrFail($id);
+        return view('reservations.edit', compact('reservation'));
     }
 }

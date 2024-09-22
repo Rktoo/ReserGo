@@ -25,8 +25,8 @@ class ServiceController extends Controller
             'description' => 'nullable|string',
             'price' => 'string'
         ]);
-        
-        Service::create($request->only('name', 'description'));
+
+        Service::create($request->only('name', 'description', 'price'));
 
         return redirect()->route('services.index')->with('success', 'Service créé avec succès.');
     }

@@ -7,15 +7,24 @@
         @csrf
         <div class="mb-4">
             <label for="name" class="block text-sm font-medium text-gray-700">Nom du Service</label>
-            <input type="text" name="name" id="name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" required>
+            <input type="text" name="name" id="name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" >
+            @error('name')
+            <span class="text-red-500 text-sm">{{ $message }}</span>
+            @enderror
         </div>
         <div class="mb-4">
             <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
             <textarea name="description" id="description" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm"></textarea>
+            @error('description')
+            <span class="text-red-500 text-sm">{{ $message }}</span>
+            @enderror
         </div>
         <div class="mb-4">
             <label for="price" class="block text-sm font-medium text-gray-700">Prix</label>
             <input type="text" name="price" id="price" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm"/>
+            @error('price')
+            <span class="text-red-500 text-sm">{{ $message }}</span>
+            @enderror
         </div>
         <button type="submit" class="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700">
             Créer le Service

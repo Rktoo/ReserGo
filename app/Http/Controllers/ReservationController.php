@@ -18,8 +18,21 @@ class ReservationController extends Controller
         $services = Service::all();
         return view('reservations.create', compact('services'));
     }
-    public function store()
+    public function store(Request $request)
     {
+        // Validation des données du formulaire
+        $validated = $request->validate([
+            'service_id' => 'required|exists:services,id|not_in:-1', // Vérifie que le service existe et n'est pas l'option par défaut
+            'reservation_date' => 'required|date|after:now', // Date de réservation doit être future
+        ]);
 
+        // Créer la réservation si la validation est réussie
+        Reservation::create([
+            'service_id' => $validated['service_id'],
+            'reservation_date' => $validated['reservation_date'],
+            // Autres champs à remplir si nécessaire
+        ]);
+
+        return redirect()->route('reservations.index')->with('success', 'Réservation effectuée avec succès!');
     }
 }

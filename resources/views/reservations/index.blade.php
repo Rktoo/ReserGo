@@ -13,7 +13,7 @@
             <div class="group flex justify-between p-4 bg-white rounded shadow-sm mb-4">
                 <div>
                 <h3 class="text-lg font-medium">{{ $reservation->service->name }}</h3>
-                <p class="max-sm:w-10/12 hidden group-hover:flex  my-2 transition-all duration-200 ease-in-out">{{ $reservation-> service -> description }}</p>
+                <p class="max-lg:w-10/12 hidden group-hover:flex  my-2 transition-all duration-200 ease-in-out">{{ $reservation-> service -> description }}</p>
                 <p>Date : {{ $reservation->reservation_date->format('d-m-Y') }}</p>
                 <p>Heure : {{ $reservation-> reservation_date->format('H:i') }}</p>
             </div>

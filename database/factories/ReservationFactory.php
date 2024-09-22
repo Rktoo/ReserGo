@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Reservation;
 use App\Models\Service;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -21,10 +22,11 @@ class ReservationFactory extends Factory
     public function definition(): array
     {
         $service = Service::inRandomOrder()->first();
+        $user = User::inRandomOrder()->first();
+
         return [
-            'service_id' => $service -> id,  // Associe une réservation à un service
-            'customer_name' => $this->faker->name(),
-            'customer_email' => $this->faker->safeEmail(),
+            'service_id' => $service->id,  // Associe une réservation à un service
+            'user_id' => $user->id,
             'reservation_date' => $this->faker->dateTimeBetween('now', '+1 year')
         ];
     }

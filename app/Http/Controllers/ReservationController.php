@@ -34,8 +34,7 @@ class ReservationController extends Controller
 
         Reservation::create([
             'service_id' => $validated['service_id'],
-            'customer_name' => Auth::user()->name,
-            'customer_email' => Auth::user()->email,
+            'user_id' => Auth::id(),
             'reservation_date' => $validated['reservation_date'],
         ]);
 

@@ -19,12 +19,14 @@ class Reservation extends Model
     protected $casts = [
         'reservation_date' => 'datetime',  // Conversion automatique en Carbon
     ];
-    
-    public function user() {
+
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 
-    public function service() {
+    public function service()
+    {
         return $this->belongsTo(Service::class);
     }
 }

@@ -3,6 +3,15 @@
 @section('content')
     <div class="max-w-lg mx-auto my-10 p-5 bg-white rounded shadow">
         <h1 class="text-xl font-semibold mb-4">Faire une Réservation</h1>
+
+
+        @guest
+            <!-- Modal pour inviter à se connecter -->
+            @component('components.auth-modal')
+            @endcomponent
+
+        @endguest
+
         <form action="{{ route('reservations.store') }}" method="POST">
             @csrf
 

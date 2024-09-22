@@ -15,5 +15,8 @@ Route::resource('reservations', ReservationController::class);
 
 route::get('/', [HomeController::class, "index"])->name('home');
 Route::get('reservations/create/{serviceId?}', [ReservationController::class, 'create'])->name('reservations.create');
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
 route::view('/about', 'pages.about')->name('about');
 route::view('/contact', 'pages.contact')->name('contact');

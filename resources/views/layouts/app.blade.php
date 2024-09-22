@@ -7,11 +7,13 @@
     @vite('resources/css/app.css')
 </head>
 <body class="relative bg-gray-100">
-    <header class="flex justify-between items-center max-sm:text-xs bg-blue-500 text-white py-4 px-4">
+    <header class=" flex justify-between items-center gap-2 max-sm:text-xs bg-blue-500 text-white ">
+        <div class="max-w-6xl w-full mx-auto py-4 px-4 flex flex-col gap-2">
         <a href="/">
-        <h1 class="text-3xl max-sm:text-lg text-center mr-4">ReserGo </h1>
+        <h1 class="text-3xl max-sm:text-lg text-center font-semibold mr-4">ReserGo </h1>
     </a>
         @include('layouts.navbar')
+    </div>
     </header>
     <div class="container mx-auto mb-4 px-4 flex flex-col">
         <main class="mt-1">

@@ -23,8 +23,9 @@ class ServiceController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
+            'price' => 'string'
         ]);
-
+        
         Service::create($request->only('name', 'description'));
 
         return redirect()->route('services.index')->with('success', 'Service créé avec succès.');

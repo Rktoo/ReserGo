@@ -1,6 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="flex justify-end mx-auto">
+        <a href="{{ route('dashboard.edit') }}" class="group mr-4 flex items-center space-x-1 text-xs ">
+            <img src="{{ asset('images/icons/setting.png') }}" alt="user setting icon"
+                class="w-10 h-8 group-hover:scale-110 transition-transform duration-150 ease-in-out">
+            <span class="max-sm:hidden group-hover:font-semibold">Paramètres</span>
+        </a>
+    </div>
     <div class="container mx-auto my-8">
         <h2 class="text-2xl font-semibold mb-4">Réservations futures</h2>
         <ul class="bg-white shadow-md rounded-lg p-4 mb-8">
@@ -40,7 +47,7 @@
                     </div>
                     <div>
                         <a href="{{ route('dashboard.reservations.show', $reservation->id) }}"
-                            class="text-blue-500 hover:underline">Détails</a>
+                            class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-l-md">Détails</a>
                     </div>
                 </li>
             @empty

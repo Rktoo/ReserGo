@@ -8,8 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     cancelButtons.forEach(button => {
         button.addEventListener('click', function (e) {
             const reservationId = this.getAttribute('data-id');
-            formToSubmit = this.closest('form');
-            confirmYes.closest('form').action = `/reservations/${reservationId}`;
+            confirmYes.closest('form').setAttribute('action', `dashboard/reservations/${reservationId}`);
             modal.classList.remove('hidden');
             modal.classList.add('flex');
         });
@@ -26,4 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.classList.add('hidden');
         formToSubmit = null;
     });
+
+
 });

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserDashboardController extends Controller
 {
@@ -35,6 +36,38 @@ class UserDashboardController extends Controller
 
         return view('dashboard.show', compact('reservation'));
     }
+
+    public function edit()
+    {
+        return view('dashboard.edit', ['user' => Auth::user()]);
+    }
+
+    public function updateName(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
+
+        $user = Auth::user();
+        $user->name = $request->input('name');
+        $user->save();
+
+        return redirect()->back()->with('success', 'Nom mis à jour avec succès.');
+    }
+
+    public function updatePassword(Request $request)
+    {
+        $request->validate([
+            'password' => 'required|string|confirmed|min:8',
+        ]);
+
+        $user = Auth::user();
+        $user->password = Hash::make($request->input('password'));
+        $user->save();
+
+        return redirect()->back()->with('success', 'Mot de passe mis à jour avec succès.');
+    }
+
 
     public function destroy($id)
     {

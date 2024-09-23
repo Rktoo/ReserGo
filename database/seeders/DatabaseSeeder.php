@@ -34,16 +34,19 @@ class DatabaseSeeder extends Seeder
                 'name' => 'Soins du Visage',
                 'description' => 'Un soin du visage en profondeur pour revitaliser votre peau.',
                 'price' => 75.00,
+                'image_url' => '/images/services/soinduvisage.png'
             ],
             [
                 'name' => 'Entraînement Personnel',
                 'description' => 'Un coach personnel pour vous guider dans vos objectifs de fitness.',
                 'price' => 100.00,
+                'image_url' => '/images/services/coachfitness.png'
             ],
             [
                 'name' => 'Cours de Yoga',
                 'description' => 'Séances de yoga en groupe pour améliorer votre souplesse et réduire le stress.',
                 'price' => 20.00,
+                'image_url' => '/images/services/yoga.png'
             ],
         ];
         User::factory(10)->create();

@@ -30,31 +30,31 @@
                 @enderror
             </div>
 
-            <div class="flex justify-between">
-                <div class="mb-4 flex items-center">
+            <div class="flex justify-between text-sm max-sm:text-xs">
+                <div class="mb-1 flex items-center">
                     <input type="checkbox" name="remember" id="remember"
                         class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
-                    <label for="remember" class="ml-2 text-sm text-gray-900">Se souvenir de moi</label>
+                    <label for="remember" class="ml-2 text-gray-900">Se souvenir de moi</label>
                 </div>
-                <div class="flex text-sm gap-1">
-                    <p class="text-gray-800">Pas encore de compte ?</p>
+                <div class="flex gap-1">
+                    <p class="text-gray-800">Pas de compte ?</p>
                     <a href="{{ route('register') }}"
                         class="text-blue-400 hover:underline hover:underline-offset-2 transition-all duration-200 ease-in-out">Cliquer
                         ici</a>
                 </div>
             </div>
-            <div class="mt-2 mb-4">
+            <div class="mt-2 mb-2">
                 <button type="submit" class="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700">
                     Connexion
                 </button>
             </div>
 
-            @if (Route::has('password.request'))
+            {{-- @if (Route::has('password.request'))
                 <div class="text-center">
                     <a href="{{ route('password.request') }}" class="text-sm text-blue-500 hover:underline">Mot de passe
                         oublié ?</a>
                 </div>
-            @endif
+            @endif --}}
         </form>
     </div>
 @endsection

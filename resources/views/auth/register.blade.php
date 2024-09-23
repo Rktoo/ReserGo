@@ -51,16 +51,16 @@
                 @enderror
             </div>
 
-            <div class="flex justify-between">
+            <div class=" flex justify-between text-sm max-sm:text-xs">
 
-                <div class="flex text-sm gap-1">
+                <div class="mb-1 flex justify-between w-full px-6 gap-1">
                     <p class="text-gray-800">Vous avez déjà un compte ?</p>
                     <a href="{{ route('login') }}"
                         class="text-blue-400 hover:underline hover:underline-offset-2 transition-all duration-200 ease-in-out">Cliquer
                         ici</a>
                 </div>
             </div>
-            <div class="mt-2 mb-4">
+            <div class="mt-2 mb-2">
                 <button type="submit" class="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700">
                     Créer un compte
                 </button>

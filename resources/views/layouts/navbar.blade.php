@@ -1,5 +1,5 @@
 <nav class="px-2  ">
-    <div class="bg-blue-600 border p-4 container mx-auto flex justify-between">
+    <div class="bg-blue-600 border p-4 container mx-auto flex justify-between overflow-hidden">
         <div class="">
             <a href="{{ route('home') }}"
                 class="bg-blue-600 hover:bg-blue-300 text-white font-semibold py-4 px-4 max-sm:py-4 max-sm:px-2">Accueil</a>

@@ -4,9 +4,11 @@
     <div class="">
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mx-2">
             <h1 class="text-2xl max-sm:text-xl mt-2 font-semibold">Services</h1>
-            <a href="{{ route('services.create') }}"
-                class="inline-block mt-2 py-2 px-4 max-sm:text-sm text-nowrap bg-blue-600 text-white rounded-md hover:bg-blue-700">Ajouter
-                un Service</a>
+            @can('admin')
+                <a href="{{ route('services.create') }}"
+                    class="inline-block mt-2 py-2 px-4 max-sm:text-sm text-nowrap bg-blue-600 text-white rounded-md hover:bg-blue-700">Ajouter
+                    un Service</a>
+            @endcan
         </div>
         <div class="mt-4">
             @foreach ($services as $service)

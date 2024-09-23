@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const confirmYes = document.querySelector('#confirm-delete-btn');
     const confirmNo = document.querySelector('#cancel-btn');
     let formToSubmit = null;
-    
+
     cancelButtons.forEach(button => {
         button.addEventListener('click', function (e) {
             const reservationId = this.getAttribute('data-id');
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
             modal.classList.add('flex');
         });
     });
-    
+
     confirmYes.addEventListener('click', function () {
         if (formToSubmit) {
             formToSubmit.submit();
@@ -25,6 +25,4 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.classList.add('hidden');
         formToSubmit = null;
     });
-
-
 });

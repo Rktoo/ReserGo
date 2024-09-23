@@ -68,6 +68,16 @@ class UserDashboardController extends Controller
         return redirect()->back()->with('success', 'Mot de passe mis à jour avec succès.');
     }
 
+    // Suppression du compte de l'utilisateur
+    public function destroyAccount()
+    {
+        $user = Auth::user();
+        $user->delete();
+        Auth::logout();
+
+        return redirect('/')->with('success', 'Votre compte a bien été supprimé');
+    }
+
 
     public function destroy($id)
     {

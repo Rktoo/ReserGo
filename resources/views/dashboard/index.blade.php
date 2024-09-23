@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="flex justify-end mx-auto">
+    <div class="flex justify-between mx-auto">
+        <div>
+            <h4 class="text-xl font-semibold">{{ Auth::user()->name }}</h4>
+        </div>
         <a href="{{ route('dashboard.edit') }}" class="group mr-4 flex items-center space-x-1 text-xs ">
             <img src="{{ asset('images/icons/setting.png') }}" alt="user setting icon"
                 class="w-10 h-8 group-hover:scale-110 transition-transform duration-150 ease-in-out">
@@ -55,22 +58,10 @@
             @endforelse
         </ul>
     </div>
-
-    <div id="confirmation-modal" class="fixed inset-0 bg-gray-600 bg-opacity-75 items-center justify-center hidden">
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-            <h2 class="text-xl font-bold mb-4">Confirmer l'annulation</h2>
-            <p>Êtes-vous sûr de vouloir annuler cette réservation ?</p>
-            <div class="mt-6 flex justify-end space-x-1">
-                <button id="cancel-btn" class="px-4 py-2 bg-gray-400 text-white rounded-md hover:bg-gray-500">Non</button>
-                <form method="POST" style="display:inline;">
-                    @csrf
-                    @method('DELETE')
-                    <button id="confirm-delete-btn"
-                        class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600">Oui</button>
-                </form>
-            </div>
-        </div>
-    </div>
+    @include('components.confirmation-modal', [
+        'title' => "Confirmer l'annulation",
+        'message' => 'Êtes-vous sûr de vouloir annuler cette réservation ?',
+    ])
 @endsection
 
 @push('scripts')

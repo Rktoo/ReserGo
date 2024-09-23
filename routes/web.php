@@ -32,7 +32,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/settings', [UserDashboardController::class, 'edit'])->name('dashboard.edit');
     Route::put('/dashboard/update-name', [UserDashboardController::class, 'updateName'])->name('dashboard.updateName');
     Route::put('/dashboard/update-password', [UserDashboardController::class, 'updatePassword'])->name('dashboard.updatePassword');
-    // Route::delete('/account', [UserDashboardController::class, ])
+    Route::delete('/dashboard/destroy-account', [UserDashboardController::class, "destroyAccount"])->name('dashboard.destroyAccount');
 
     Route::get('/reservations/{id}/edit', [ReservationController::class, 'edit'])->name('reservations.edit');
     Route::put('/reservations/{id}', [ReservationController::class, 'update'])->name('reservations.update');

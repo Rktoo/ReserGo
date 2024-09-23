@@ -71,20 +71,21 @@
                 </button>
             </form>
         </section>
-        <!-- Formulaire pour supprimer le compte -->
-        <form {{-- action="{{ route('account.destroy') }}" --}} method="POST"
-            onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer votre compte ?');" class="text-center">
-            @csrf
-            @method('DELETE')
 
-            <button type="submit" id="deleteAccount_"
-                class="bg-red-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-red-600 transition-colors">
-                Supprimer le compte
-            </button>
-        </form>
+        <!-- Formulaire pour supprimer le compte -->
+
+        <button type="submit" id="deleteAccount_"
+            class="bg-red-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-red-600 transition-colors">
+            Supprimer le compte
+        </button>
+
     </div>
+    @include('components.confirmation-modal', [
+        'title' => 'Confirmer la suppresion',
+        'message' => 'Êtes-vous sûr de vouloir supprimer votre compte ?',
+    ])
 @endsection
 
 @push('scripts')
-    <script src="{{ asset('js/settings.js') }}"></script>
+    <script type="module" src="{{ asset('js/settings.js') }}"></script>
 @endpush

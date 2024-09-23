@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
     const changeNameCheckbox = document.getElementById('changeNameCheckbox');
     const nameField = document.getElementById('nameField');
@@ -40,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Fonction pour activer ou désactiver le bouton de soumission
-    function disableForm(btn) {
+    function disableForm() {
         // Vérifier si au moins une case est cochée
         const isAnyChecked = changeNameCheckbox.checked || changePasswordCheckbox.checked;
         btnSubmit.disabled = !isAnyChecked; // Désactive le bouton si aucune case n'est cochée
@@ -58,9 +59,29 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-
     // Ouverture de la modale pour suppression de compte 
-    deleteAccount.addEventListener('click', function () {
+    const modal = document.querySelector('#confirmation-modal');
+    const confirmYes = document.querySelector('#confirm-delete-btn');
+    const confirmNo = document.querySelector('#cancel-btn');
+    let formToSubmit = null;
 
-    });
+    deleteAccount.addEventListener("click", function () {
+
+        const reservationId = this.getAttribute('data-id');
+        confirmYes.closest('form').setAttribute('action', `dashboard/destroy-account`);
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+
+        confirmYes.addEventListener('click', function () {
+            if (formToSubmit) {
+                formToSubmit.submit();
+            }
+        });
+
+        confirmNo.addEventListener('click', function () {
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            formToSubmit = null;
+        });
+    })
 });

@@ -3,10 +3,17 @@
         <div class="">
             <a href="{{ route('home') }}"
                 class="bg-blue-600 hover:bg-blue-300 text-white font-semibold py-4 px-4 max-sm:py-4 max-sm:px-2">Accueil</a>
-            <a href="{{ route('services.index') }}"
-                class="bg-blue-600 hover:bg-blue-300 text-white font-semibold py-4 px-4 max-sm:py-4 max-sm:px-2">Services</a>
-            <a href="{{ route('reservations.index') }}"
-                class="bg-blue-600 hover:bg-blue-300 text-white font-semibold py-4 px-4 max-sm:py-4 max-sm:px-2 ">Réservations</a>
+            @can('user')
+                <a href="{{ route('dashboard.index') }}"
+                    class="bg-blue-600 hover:bg-blue-300 text-white font-semibold py-4 px-4 max-sm:py-4 max-sm:px-2">Vos
+                    réservations</a>
+            @endcan
+            @can('admin')
+                <a href="{{ route('services.index') }}"
+                    class="bg-blue-600 hover:bg-blue-300 text-white font-semibold py-4 px-4 max-sm:py-4 max-sm:px-2">Services</a>
+                <a href="{{ route('reservations.index') }}"
+                    class="bg-blue-600 hover:bg-blue-300 text-white font-semibold py-4 px-4 max-sm:py-4 max-sm:px-2 ">Réservations</a>
+            @endcan
         </div>
         <div class="">
             <a href="{{ route('about') }}"

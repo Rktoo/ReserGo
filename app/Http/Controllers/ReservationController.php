@@ -16,7 +16,7 @@ class ReservationController extends Controller implements HasMiddleware
     public static function middleware(): array
     {
         return [
-            new Middleware(AdminMiddleware::class, only: ["index", "create"])
+            new Middleware(AdminMiddleware::class, only: ["index"])
         ];
     }
     public function index()

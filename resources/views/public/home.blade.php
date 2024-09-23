@@ -19,7 +19,7 @@
                     </div>
                     @if ($service->image_url)
                         <img src="{{ $service->image_url }}" alt="image for {{ $service->name . ' ' }}service"
-                            class="absolute top-0 left-1/2 w-full opacity-40 bg-cover z-10">
+                            class="absolute -top-5 left-[35%] scale-75 opacity-40 bg-cover z-10" loading="lazy">
                     @endif
                 </div>
             @endforeach

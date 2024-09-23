@@ -6,6 +6,7 @@ use App\Models\Reservation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Models\User;
 
 class UserDashboardController extends Controller
 {
@@ -48,6 +49,7 @@ class UserDashboardController extends Controller
             'name' => 'required|string|max:255',
         ]);
 
+        /**@var User $user */
         $user = Auth::user();
         $user->name = $request->input('name');
         $user->save();
@@ -61,6 +63,7 @@ class UserDashboardController extends Controller
             'password' => 'required|string|confirmed|min:8',
         ]);
 
+        /**@var User $user */
         $user = Auth::user();
         $user->password = Hash::make($request->input('password'));
         $user->save();
@@ -71,6 +74,7 @@ class UserDashboardController extends Controller
     // Suppression du compte de l'utilisateur
     public function destroyAccount()
     {
+        /**@var User $user */
         $user = Auth::user();
         $user->delete();
         Auth::logout();

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="max-w-md mx-auto my-10 bg-white p-5 rounded-lg shadow-md">
+    <div class="relative max-w-md mx-auto my-10 bg-white p-5 rounded-lg shadow-md">
         <h2 class="text-2xl font-semibold text-center text-blue-600 mb-5">Connexion</h2>
 
         @if (session('status'))

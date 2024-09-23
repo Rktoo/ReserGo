@@ -2,10 +2,11 @@
 
 @section('content')
     <div class="flex justify-between mx-auto">
-        <div>
+        <div class="flex flex-col justify-center items-center">
+            <img src="{{ asset('images/icons/user.png') }}" alt="user icon" class="w-10 h-10">
             <h4 class="text-xl font-semibold">{{ Auth::user()->name }}</h4>
         </div>
-        <a href="{{ route('dashboard.edit') }}" class="group mr-4 flex items-center space-x-1 text-xs ">
+        <a href="{{ route('dashboard.edit') }}" class="group mr-4 flex items-center space-x-1 text-sm max-sm:text-xs ">
             <img src="{{ asset('images/icons/setting.png') }}" alt="user setting icon"
                 class="w-10 h-8 group-hover:scale-110 transition-transform duration-150 ease-in-out">
             <span class="max-sm:hidden group-hover:font-semibold">Paramètres</span>

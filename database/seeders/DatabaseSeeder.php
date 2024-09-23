@@ -16,16 +16,19 @@ class DatabaseSeeder extends Seeder
                 'name' => 'Massage Relaxant',
                 'description' => 'Un massage apaisant qui réduit le stress et détend les muscles.',
                 'price' => 60.00,
+                'image_url' => '/images/services/massage.png'
             ],
             [
                 'name' => 'Manucure et Pédicure',
                 'description' => 'Prenez soin de vos ongles avec notre service complet de manucure et pédicure.',
                 'price' => 40.00,
+                'image_url' => '/images/services/manucure.png'
             ],
             [
                 'name' => 'Coiffure Coupe et Brushing',
                 'description' => 'Une coupe de cheveux professionnelle avec un brushing parfait.',
                 'price' => 80.00,
+                'image_url' => '/images/services/coiffure.png'
             ],
             [
                 'name' => 'Soins du Visage',

@@ -3,11 +3,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const countdownElement = document.querySelector("#countdown");
     const closeModalButton = document.querySelector("#close-modal");
 
-    let countdown = 5; 
+    let countdown = 4; 
     let countdownInterval;
 
     // Fonction pour afficher la modal et démarrer le compte à rebours
     function showModal() {
+        countdownElement.textContent = countdown;
         modal.classList.remove("hidden"); // Afficher la modal
         modal.classList.add("flex");
         countdownInterval = setInterval(() => {

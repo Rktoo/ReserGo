@@ -45,10 +45,13 @@ Bienvenue dans le dépôt de **ReserGo** ! Ce projet est une application de rés
    ```bash
    php artisan key:generate
 
-2. **Faites le lien du storage vers le dossier public**
+2. **Créer votre fichier d'environnement .env**
+    ```bash
+    cp .env.example .env
+3. **Faites le lien du storage vers le dossier public**
     ```bash
     php artisan storage:link
-3. **Lancez les migrations et le seeding de la base de données :**
+4. **Lancez les migrations et le seeding de la base de données :**
     ```bash
    php artisan migrate --seed
 

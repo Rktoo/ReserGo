@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Profil')
 @section('content')
-    <div class="flex justify-between mx-auto">
+    <div class="flex justify-between mx-auto px-4">
         <div class="flex flex-col justify-center items-center">
             <img src="{{ asset('images/icons/user.png') }}" alt="user icon" class="w-10 h-10">
             <h4 class="text-xl font-semibold">{{ Auth::user()->name }}</h4>

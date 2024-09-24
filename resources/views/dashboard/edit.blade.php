@@ -6,7 +6,7 @@
         <!-- Formulaire pour la mise à jour du nom -->
         <section>
             <!-- Checkbox pour modifier le nom -->
-            <div class="mb-4">
+            <div class="m-4">
                 <label class="inline-flex items-center">
                     <input type="checkbox" id="changeNameCheckbox" class="form-checkbox text-blue-500">
                     <span class="ml-2 text-gray-700 font-medium">Modifier votre nom d'utilisateur</span>
@@ -34,7 +34,7 @@
         <!-- Formulaire pour la mise à jour du mot de passe -->
         <section>
 
-            <div class="mb-4">
+            <div class="m-4">
                 <label class="inline-flex items-center">
                     <input type="checkbox" id="changePasswordCheckbox" class="form-checkbox text-blue-500">
                     <span class="ml-2 text-gray-700 font-medium">Modifier le mot de passe</span>

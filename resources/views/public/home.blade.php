@@ -4,8 +4,7 @@
     <?php
     $servicePopulaires = ['Service de nettoyage professionnel', 'Coiffure et soins de beauté', "Organisation d'événements et de fêtes", 'Consultation et coaching personnel', "Services de réparation et d'entretien à domicile", "Et bien d'autres encore !"];
     ?>
-    <div class="py-4">
-
+    <div class="my-2 py-4 ">
         <h1 class="max-sm:text-center text-3xl font-bold mb-6">Bienvenue sur ReserGo</h1>
         <p class="max-sm:text-center text-gray-700 mb-6">Réservez vos services facilement en ligne !</p>
 

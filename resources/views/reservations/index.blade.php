@@ -10,7 +10,7 @@
         </div>
         <div class="mt-4 max-sm:text-sm">
             @foreach ($reservations as $reservation)
-                <div class="group flex justify-between p-4 bg-white rounded shadow-md mb-4">
+                <div class="reservation-card group flex justify-between p-4 bg-white rounded shadow-md mb-4">
                     <div>
                         <h3 class="text-lg font-medium">{{ $reservation->service->name }}</h3>
                         <p class="max-lg:w-10/12 hidden group-hover:flex  my-2 transition-all duration-200 ease-in-out">
@@ -27,3 +27,8 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    @vite('resources/js/animation.js')
+@endpush

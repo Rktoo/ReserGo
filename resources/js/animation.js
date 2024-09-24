@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const serviceCards = document.querySelectorAll('.service-card');
     const serviceList = document.querySelectorAll('.service-List');
-
+    const reservationCards = document.querySelectorAll('.reservation-card');
 
     if (serviceList) {
         gsap.fromTo(serviceList,
@@ -26,13 +26,28 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         }, {
-            threshold: 0.1
+            threshold: 0.4
         });
         elements.forEach(el => observer.observe(el));
     }
 
     if (serviceCards) {
         animationOnScroll(serviceCards, (el) => {
+            gsap.fromTo(el,
+                { opacity: 0, y: 40 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.7,
+                    stagger: 0.5,
+                    ease: "power2.out"
+                }
+            );
+        });
+    }
+
+    if (reservationCards) {
+        animationOnScroll(reservationCards, (el) => {
             gsap.fromTo(el,
                 { opacity: 0, y: 40 },
                 {

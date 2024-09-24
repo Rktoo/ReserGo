@@ -12,7 +12,7 @@
         </div>
         <div class="mt-4">
             @foreach ($services as $service)
-                <div class="flex justify-between items-end p-4 bg-white rounded shadow-md mb-4">
+                <div class="service-card flex justify-between items-end p-4 bg-white rounded shadow-md mb-4">
                     <div>
                         <h3 class="text-lg font-medium">{{ $service->name }}</h3>
                         <p>{{ $service->description }}</p>
@@ -37,4 +37,6 @@
 
 @push('scripts')
     <script src="{{ asset('js/dashboard.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    @vite('resources/js/animation.js')
 @endpush

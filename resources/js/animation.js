@@ -45,4 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
             );
         });
     }
+
+    // window.addEventListener('popstate', animateMainContent);
 });

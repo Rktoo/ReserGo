@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReserGo Application de Réservation</title>
     @vite('resources/css/app.css')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
 
 <body class="relative bg-gray-100">
@@ -38,7 +39,7 @@
         </div>
     </header>
     <div class="container mx-auto mb-4 px-4 flex flex-col">
-        <main class="max-w-6xl w-full mx-auto py-6 sm:px-6 lg:px-8">
+        <main class="master_ max-w-6xl w-full mx-auto py-6 sm:px-6 lg:px-8">
             @if ($errors->any())
                 <div class="mb-4 text-red-500">
                     <ul id="errors_">
@@ -56,7 +57,7 @@
         <p class="text-gray-50">&copy; {{ date('Y') }} ReserGo. Tous droits réservés.</p>
     </footer>
 
-    <script src="{{ asset('js/errorHandling.js') }}"></script>
+    @vite('resources/js/errorHandling.js')
     @stack('scripts')
 </body>
 

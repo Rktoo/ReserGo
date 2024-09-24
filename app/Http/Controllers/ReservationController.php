@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Middleware\AdminMiddleware;
 use App\Models\Reservation;
 use App\Models\Service;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
@@ -21,25 +22,27 @@ class ReservationController extends Controller implements HasMiddleware
     }
     public function index()
     {
-        $reservations = Reservation::with('service')->get();
+        $reservations = Reservation::with('service')->orderBy('reservation_date', 'asc')->get();
+
         return view('reservations.index', compact('reservations'));
     }
     public function create(Service $service, $serviceId = null)
     {
         $services = Service::all();
-
+        $users = User::all();
         if ($serviceId) {
             $service = Service::find($serviceId);
             return view("reservations.create", compact('service', 'services'));
         }
 
-        return view('reservations.create', compact('services'));
+        return view('reservations.create', compact('services', 'users'));
     }
     public function store(Request $request)
     {
         $validated = $request->validate([
             'service_id' => 'required|exists:services,id|not_in:-1', // Vérifie que le service existe et n'est pas l'option par défaut
             'reservation_date' => 'required|date|after:now', // Date de réservation doit être future
+            'user' => 'nullable|exists:users,id'
         ]);
         // dd($validated['reservation_date']);
         // dd($validated['service_id']);
@@ -48,6 +51,10 @@ class ReservationController extends Controller implements HasMiddleware
         // Vérifiez que l'utilisateur est bien authentifié
         if (!$userId) {
             return redirect()->route('login')->withErrors('Vous devez être connecté pour réserver.');
+        }
+
+        if (Auth::user()->role === 'admin' && $request->filled('user')) {
+            $userId = $request->input('user');
         }
 
         $existingReservation = Reservation::where('service_id', $validated['service_id'])

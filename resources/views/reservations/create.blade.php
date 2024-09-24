@@ -21,6 +21,22 @@
             @else
                 @can('admin')
                     <div class="mb-4">
+                        <label for="user" class="block text-sm font-medium text-gray-700">Utilisateur</label>
+
+                        <select name="user" id="user" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
+                            required>
+                            <option value="-1">Sélectionner l'utilisateur</option>
+                            @foreach ($users as $user)
+                                <option value="{{ $user->id }}" {{ old('user') == $user->id ? 'selected' : '' }}>
+                                    {{ $user->email }}
+                                </option>
+                            @endforeach
+                        </select>
+                        @error('user')
+                            <span class="text-red-500 text-sm">{{ $message }}</span>
+                        @enderror
+                    </div>
+                    <div class="mb-4">
                         <label for="service" class="block text-sm font-medium text-gray-700">Service</label>
                         <select name="service_id" id="service" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
                             required>

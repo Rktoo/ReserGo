@@ -13,7 +13,7 @@
         </div>
         <div class="mt-4">
             @foreach ($services as $service)
-                <div class="service-card flex justify-between items-end p-4 bg-white rounded shadow-md mb-4">
+                <div class="service-card flex justify-between items-end p-4 bg-white rounded shadow-md mb-4 opacity-0">
                     <div>
                         <h3 class="text-lg font-medium">{{ $service->name }}</h3>
                         <p>{{ $service->description }}</p>

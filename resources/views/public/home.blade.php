@@ -6,8 +6,8 @@
     ?>
     <div class="my-2 py-4 ">
         <div class="w-auto mb-6 flex flex-col justify-center items-center space-y-2 bg-white p-4 rounded-lg overflow-hidden">
-            <h1 class="title_ max-sm:text-center text-3xl font-bold ">Bienvenue sur ReserGo</h1>
-            <p class="max-sm:text-center text-gray-700">Réservez vos services facilement en ligne !</p>
+            <h1 class="title_ max-sm:text-center text-3xl font-bold opacity-0">Bienvenue sur ReserGo</h1>
+            <p class="subtitle_ max-sm:text-center text-gray-700 opacity-0">Réservez vos services facilement en ligne !</p>
         </div>
 
         <div class="max-w-3xl mx-auto text-center mb-8">
@@ -19,7 +19,7 @@
             <p class="text-sm text-gray-600 max-sm:mb-2"> Voici quelques-uns de nos services populaires :</p>
             <ul class="flex flex-col justify-start items-start flex-wrap text-wrap list-disc list-inside text-gray-600 mb-4">
                 @foreach ($servicePopulaires as $s)
-                    <li class="service-List text-start text-wrap">{{ $s }}</li>
+                    <li class="service-List text-start text-wrap opacity-0">{{ $s }}</li>
                 @endforeach
             </ul>
             <p class="text-gray-600">N'attendez plus pour profiter de nos offres exceptionnelles. Choisissez le service qui

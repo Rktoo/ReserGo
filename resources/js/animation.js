@@ -3,8 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const serviceList = document.querySelectorAll('.service-List');
     const reservationCards = document.querySelectorAll('.reservation-card');
     const title_ = document.querySelector('.title_');
-    let loadedTitle = false;
-    if (title_) {
+    const subtitle_ = document.querySelector(".subtitle_");
+
+    if (title_ && subtitle_) {
         gsap.fromTo(title_,
             { opacity: 0, y: -200 },
             {
@@ -14,7 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         );
 
+        gsap.fromTo(subtitle_,
+            { opacity: 0 },
+            { opacity: 1, duration: 1, ease: "power2.in" }
+        );
+
     }
+
 
     function afterTitle() {
         if (serviceList) {

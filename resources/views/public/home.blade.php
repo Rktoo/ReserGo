@@ -17,7 +17,7 @@
             <p class="text-gray-600 mb-0"> Voici quelques-uns de nos services populaires :</p>
             <ul class="flex flex-col justify-start items-start list-disc list-inside text-gray-600 mb-4">
                 @foreach ($servicePopulaires as $s)
-                    <li class="">{{ $s }}</li>
+                    <li class="service-List">{{ $s }}</li>
                 @endforeach
             </ul>
             <p class="text-gray-600">N'attendez plus pour profiter de nos offres exceptionnelles. Choisissez le service qui
@@ -27,4 +27,13 @@
         {{-- Listing des services --}}
         @include('components.services')
     </div>
+
+    <div class="my-4">
+        {{ $services->links() }}
+    </div>
 @endsection
+
+@push('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    @vite('resources/js/animation.js')
+@endpush

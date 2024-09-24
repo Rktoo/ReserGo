@@ -1,7 +1,8 @@
 <h2 class="text-2xl font-semibold mb-4">Services populaires</h2>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     @foreach ($services as $service)
-        <div class="relative group flex flex-col justify-between p-4 bg-white shadow rounded-lg overflow-hidden">
+        <div
+            class="service-card relative group flex flex-col justify-between p-4 bg-white shadow rounded-lg overflow-hidden">
             <div>
                 <h3 class="text-lg font-bold z-20">{{ $service->name }}</h3>
                 <p class="text-gray-600 z-20">{{ $service->description }}</p>

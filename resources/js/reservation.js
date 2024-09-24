@@ -8,17 +8,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Fonction pour afficher la modal et démarrer le compte à rebours
     function showModal() {
-        countdownElement.textContent = countdown;
+        let contentText = "";
+        countdownElement.textContent = `${countdown} secondes.`;
         modal.classList.remove("hidden"); // Afficher la modal
         modal.classList.add("flex");
         countdownInterval = setInterval(() => {
             countdown--;
-            countdownElement.textContent = countdown;
-
             if (countdown === 0) {
                 clearInterval(countdownInterval);
                 window.location.href = "/";
+            } else if (countdown < 2) {
+                contentText = `${countdown} seconde.`;
+            } else {
+                contentText = `${countdown} secondes.`;
             }
+
+            countdownElement.textContent = contentText;
         }, 1000);
     }
 

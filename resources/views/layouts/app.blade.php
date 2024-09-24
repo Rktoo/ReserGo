@@ -15,7 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
 
-<body class="relative bg-gray-50">
+<body class="relative bg-gradient-to-tr from-gray-50 to-gray-100">
     <header
         class=" flex justify-between items-center gap-2 max-sm:text-xs bg-gradient-to-tr from-blue-400 to-blue-700 text-white ">
         <div class="max-w-6xl w-full mx-auto py-4 px-4 flex flex-col gap-2">

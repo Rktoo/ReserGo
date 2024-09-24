@@ -3,8 +3,8 @@
 @section('content')
     <div class="py-4">
 
-        <h1 class="text-3xl font-bold mb-6">Bienvenue sur ReserGo</h1>
-        <p class="text-gray-700 mb-8">Réservez vos services facilement en ligne !</p>
+        <h1 class="max-sm:text-center text-3xl font-bold mb-6">Bienvenue sur ReserGo</h1>
+        <p class="max-sm:text-center text-gray-700 mb-8">Réservez vos services facilement en ligne !</p>
 
         <h2 class="text-2xl font-semibold mb-4">Nos Services</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

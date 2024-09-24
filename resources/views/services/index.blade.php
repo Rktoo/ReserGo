@@ -22,10 +22,19 @@
                             class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-l-md">Modifier</a>
 
                         <button type="button" id="annuler_"
-                            class="text-white bg-red-500 hover:bg-red-600 px-4 py-2 rounded-r-md">Supprimer</button>
+                            class="text-white bg-red-500 hover:bg-red-600 px-4 py-2 rounded-r-md"
+                            data-id="{{ $service->id }}">Supprimer</button>
                     </div>
                 </div>
             @endforeach
         </div>
     </div>
+    @include('components.confirmation-modal', [
+        'title' => "Confirmer l'annulation",
+        'message' => 'Êtes-vous sûr de vouloir annuler cette réservation ?',
+    ])
 @endsection
+
+@push('scripts')
+    <script src="{{ asset('js/dashboard.js') }}"></script>
+@endpush

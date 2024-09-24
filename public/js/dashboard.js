@@ -5,10 +5,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const confirmNo = document.querySelector('#cancel-btn');
     let formToSubmit = null;
 
+    let currentUrl = "";
+
+    switch (window.location.pathname) {
+        case "/dashboard": currentUrl = "dashboard/reservations/"
+            break;
+        default: currentUrl = "services/"
+            break;
+    }
+
     cancelButtons.forEach(button => {
         button.addEventListener('click', function (e) {
             const reservationId = this.getAttribute('data-id');
-            confirmYes.closest('form').setAttribute('action', `dashboard/reservations/${reservationId}`);
+            confirmYes.closest('form').setAttribute('action', `${currentUrl}${reservationId}`);
             modal.classList.remove('hidden');
             modal.classList.add('flex');
         });

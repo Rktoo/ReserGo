@@ -9,13 +9,14 @@ use App\Http\Controllers\Controller;
 use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
+use Illuminate\Support\Facades\Storage;
 
 class ServiceController extends Controller implements HasMiddleware
 {
 
     public static function middleware()
     {
-        return [new Middleware(AdminMiddleware::class, except: ['index'])];
+        return [AdminMiddleware::class];
     }
     public function index()
     {
@@ -30,19 +31,10 @@ class ServiceController extends Controller implements HasMiddleware
 
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'description' => 'required|string',
-            'price' => ['required', 'regex:/^\d+(\.\d{1,2})?$/'], // Autorise les décimales avec 1 ou 2 chiffres après la virgule
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:1024',
-        ]);
-        $imagePath = null;
+        $this->validateRequest($request, true);
 
-        if ($request->hasFile('image')) {
-            $image = $request->file('image');
-            $imageName = time() . '_' . $image->getClientOriginalName();
-            $imagePath = $image->storeAs('images/services', $imageName, 'public');
-        }
+        $imagePath = $this->handleImageUpload($request);
+
         Service::create([
             'name' => $request['name'],
             'description' => $request['description'],
@@ -57,5 +49,65 @@ class ServiceController extends Controller implements HasMiddleware
     {
         $service = Service::findOrFail($id);
         return view('services.edit', ['service' => $service]);
+    }
+    public function update(Request $request, $id)
+    {
+        $this->validateRequest($request, false);
+
+        $service = Service::findOrFail($id);
+
+        if ($service->image_url) {
+            Storage::disk('public')->delete($service->image_url);
+        }
+        $imagePath = $this->handleImageUpload($request);
+
+        $service->update([
+            'name' => $request['name'],
+            'description' => $request['description'],
+            'price' => $request['price'],
+            'image_url' => $imagePath,
+        ]);
+
+        return redirect()->route('services.index')->with('success', 'Service mis à jour avec succès.');
+    }
+
+    public function destroy($id)
+    {
+        $service = Service::findOrFail($id);
+
+        if (!$service) {
+            return abort(403);
+        }
+
+        $service->delete();
+        return redirect()->route('services.index')->with('success', 'Service supprimé avec succès.');
+    }
+
+    private function validateRequest(Request $request, bool $isCreating)
+    {
+        $rules = [
+            'name' => 'required|string|max:255',
+            'description' => 'required|string',
+            'price' => ['required', 'regex:/^\d+(\.\d{1,2})?$/'],
+        ];
+
+        if ($isCreating) {
+            $rules['image'] = 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:1024';
+        } else {
+            $rules['image'] = 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:1024';
+        }
+
+        $request->validate($rules);
+    }
+
+    private function handleImageUpload(Request $request)
+    {
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageName = time() . '_' . $image->getClientOriginalName();
+            return $image->storeAs('images/services', $imageName, 'public');
+        }
+
+        return null;
     }
 }

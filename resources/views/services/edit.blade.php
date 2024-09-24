@@ -44,7 +44,6 @@
                     <span class="text-red-500 text-sm">{{ $message }}</span>
                 @enderror
                 @if ($service->image_url)
-                    <!-- Affiche l'image actuelle si elle existe -->
                     <div class="mt-2">
                         <p class="text-sm text-gray-600">Image actuelle :</p>
                         <img src="{{ asset('storage/' . $service->image_url) }}" alt="Image du service"

@@ -51,7 +51,7 @@ class DatabaseSeeder extends Seeder
             ],
         ];
         User::factory(10)->create();
-
+        // Création d'un compte admin
         User::create([
             'name' => "Administrator",
             'email' => "admin@test.com",

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', $reservation->service->name)
 @section('content')
     <div class="mx-auto mt-8">
         <h2 class="text-2xl font-semibold mb-4">Détails de la réservation</h2>

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'Paramètres')
 @section('content')
     <div class="container mx-auto my-8 max-w-lg">
         <h2 class="text-2xl font-bold mb-6 text-center">Paramètres du compte</h2>

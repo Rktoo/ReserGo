@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'Réservations')
 @section('content')
     <div class="">
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mx-2">

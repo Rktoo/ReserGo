@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'Accueil')
 @section('content')
     <?php
     $servicePopulaires = ['Service de nettoyage professionnel', 'Coiffure et soins de beauté', "Organisation d'événements et de fêtes", 'Consultation et coaching personnel', "Services de réparation et d'entretien à domicile", "Et bien d'autres encore !"];

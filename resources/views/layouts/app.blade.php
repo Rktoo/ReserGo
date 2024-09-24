@@ -4,12 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReserGo Application de Réservation</title>
+    <title>
+        @hasSection('title')
+            @yield('title') - ReserGo
+        @else
+            ReserGo Application de Réservation
+        @endif
+    </title>
     @vite('resources/css/app.css')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
 
-<body class="relative bg-gray-100">
+<body class="relative bg-gray-50">
     <header
         class=" flex justify-between items-center gap-2 max-sm:text-xs bg-gradient-to-tr from-blue-400 to-blue-700 text-white ">
         <div class="max-w-6xl w-full mx-auto py-4 px-4 flex flex-col gap-2">

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'Profil')
 @section('content')
     <div class="flex justify-between mx-auto">
         <div class="flex flex-col justify-center items-center">

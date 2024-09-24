@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'Edition réservation')
 @section('content')
     <div class="mx-auto mt-8 max-w-md ">
         <div class="flex flex-col mb-6">

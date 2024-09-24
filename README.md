@@ -63,7 +63,9 @@ Bienvenue dans le dépôt de **ReserGo** ! Ce projet est une application de rés
 2. **Accéder à l'application dans votre navigateur depuis :**
     ```bash
     http://localhost:8000
-
+3. **Vous avez un compte administrator prédéfini pour tester les fonctionnalités**
+    email : admin@test.com
+    password : 123456
 ## 👨‍💻 Crédits
 ### Technologies utilisées :
 🏛️ Laravel : Framework backend utilisé pour la structure MVC.

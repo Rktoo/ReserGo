@@ -6,6 +6,7 @@ use App\Models\Reservation;
 use App\Models\Service;
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -50,6 +51,13 @@ class DatabaseSeeder extends Seeder
             ],
         ];
         User::factory(10)->create();
+
+        User::create([
+            'name' => "Administrator",
+            'email' => "admin@test.com",
+            'password' => Hash::make('123456'),
+            'role' => "admin"
+        ]);
         // Boucler sur le tableau des services et les insérer dans la base de données
         foreach ($services as $service) {
             Service::create($service);

@@ -21,8 +21,9 @@ Bienvenue dans le dépôt de **ReserGo** ! Ce projet est une application de rés
 ## ✨ Fonctionnalités
 
 - 🏛️ **Structure MVC** avec Laravel
-- 🌀 **Animations dynamiques** au scroll avec GSAP
+- 🔑 Administration complète des services et réservations avec accès réservé aux administrateurs, permettant la gestion efficace des services proposés et le suivi des réservations clients
 - 🎨 **Intégration de Tailwind CSS** pour une interface épurée
+- 🌀 **Animations dynamiques** au scroll avec GSAP
 - ⭐ **Gestion des services populaires** et des offres disponibles
 - 📄 **Pagination des services**
 - 📱 **Interface responsive** pour tous les appareils

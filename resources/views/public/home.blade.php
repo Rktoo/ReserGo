@@ -16,7 +16,7 @@
                 Que vous soyez à
                 la recherche d'un service de qualité pour un événement spécial ou d'une simple prestation, nous avons ce
                 qu'il vous faut.</p>
-            <p class="text-sm text-gray-600 max-sm:mb-2"> Voici quelques-uns de nos services populaires :</p>
+            <p class="max-sm:text-sm text-gray-600 max-sm:mb-2"> Voici quelques-uns de nos services populaires :</p>
             <ul class="flex flex-col justify-start items-start flex-wrap text-wrap list-disc list-inside text-gray-600 mb-4">
                 @foreach ($servicePopulaires as $s)
                     <li class="service-List text-start text-wrap opacity-0">{{ $s }}</li>

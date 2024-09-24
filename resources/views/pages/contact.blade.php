@@ -27,3 +27,7 @@
         </form>
     </div>
 @endsection
+
+@push('scripts')
+    @vite('resources/js/contact.js')
+@endpush

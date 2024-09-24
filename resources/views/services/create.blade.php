@@ -52,5 +52,5 @@
 @endsection
 
 @push('scripts')
-    <script src="{{ asset('js/form.js') }}"></script>
+    @vite('resources/js/form.js')
 @endpush

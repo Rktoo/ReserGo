@@ -87,5 +87,5 @@
 @endsection
 
 @push('scripts')
-    <script type="module" src="{{ asset('js/settings.js') }}"></script>
+    @vite('resources/js/settings.js')
 @endpush

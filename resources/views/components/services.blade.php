@@ -3,9 +3,11 @@
     @foreach ($services as $service)
         <div
             class="service-card relative group flex flex-col justify-between p-4 bg-white shadow rounded-lg overflow-hidden">
-            <div>
-                <h3 class="text-lg font-bold z-20">{{ $service->name }}</h3>
-                <p class="text-gray-600 z-20">{{ $service->description }}</p>
+            <div class="flex flex-col justify-items-end items-start">
+                <div>
+                    <h3 class="text-lg font-bold z-20">{{ $service->name }}</h3>
+                    <p class="text-gray-600 z-20">{{ $service->description }}</p>
+                </div>
                 <div class="flex flex-col justify-end z-20">
                     <p class="text-blue-600 font-semibold mt-2">{{ number_format((float) $service->price, 2) }} €</p>
                     <a href="{{ route('reservations.create', $service->id) }}"

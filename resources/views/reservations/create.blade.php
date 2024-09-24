@@ -84,6 +84,6 @@
 
 @can('user')
     @push('scripts')
-        <script src="{{ asset('js/reservation.js') }}"></script>
+        @vite('resources/js/reservation.js')
     @endpush
 @endcan

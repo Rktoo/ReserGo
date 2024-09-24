@@ -36,8 +36,19 @@ class ServiceController extends Controller implements HasMiddleware
             'price' => ['required', 'regex:/^\d+(\.\d{1,2})?$/'], // Autorise les décimales avec 1 ou 2 chiffres après la virgule
             'image_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:1024',
         ]);
+        $imagePath = null;
 
-        Service::create($request->only('name', 'description', 'price', 'image_url'));
+        if ($request->hasFile('image_url')) {
+            $image = $request->file('image_url');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $imagePath = $image->storeAs('images/services', $imageName, 'public');
+        }
+        Service::create([
+            'name' => $request->input('name'),
+            'description' => $request->input('description'),
+            'price' => $request->input('price'),
+            'image_url' => $imagePath
+        ]);
 
         return redirect()->route('services.index')->with('success', 'Service créé avec succès.');
     }

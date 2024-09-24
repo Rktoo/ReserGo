@@ -18,7 +18,7 @@
                             class="text-blue-500 mt-2 inline-block">Réserver ce service</a>
                     </div>
                     @if ($service->image_url)
-                        <img src="{{ $service->image_url }}" alt="image for {{ $service->name . ' ' }}service"
+                        <img src="storage/{{ $service->image_url }}" alt="image for {{ $service->name . ' ' }}service"
                             class="absolute -top-5 left-[35%] scale-75 opacity-40 bg-cover z-10" loading="lazy">
                     @endif
                 </div>

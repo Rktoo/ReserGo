@@ -32,24 +32,30 @@ class ServiceController extends Controller implements HasMiddleware
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'description' => 'nullable|string',
+            'description' => 'required|string',
             'price' => ['required', 'regex:/^\d+(\.\d{1,2})?$/'], // Autorise les décimales avec 1 ou 2 chiffres après la virgule
-            'image_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:1024',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:1024',
         ]);
         $imagePath = null;
 
-        if ($request->hasFile('image_url')) {
-            $image = $request->file('image_url');
-            $imageName = time() . '.' . $image->getClientOriginalExtension();
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageName = time() . '_' . $image->getClientOriginalName();
             $imagePath = $image->storeAs('images/services', $imageName, 'public');
         }
         Service::create([
-            'name' => $request->input('name'),
-            'description' => $request->input('description'),
-            'price' => $request->input('price'),
+            'name' => $request['name'],
+            'description' => $request['description'],
+            'price' => $request['price'],
             'image_url' => $imagePath
         ]);
 
         return redirect()->route('services.index')->with('success', 'Service créé avec succès.');
+    }
+
+    public function edit($id)
+    {
+        $service = Service::findOrFail($id);
+        return view('services.edit', ['service' => $service]);
     }
 }

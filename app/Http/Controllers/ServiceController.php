@@ -34,9 +34,10 @@ class ServiceController extends Controller implements HasMiddleware
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
             'price' => ['required', 'regex:/^\d+(\.\d{1,2})?$/'], // Autorise les décimales avec 1 ou 2 chiffres après la virgule
+            'image_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:1024',
         ]);
 
-        Service::create($request->only('name', 'description', 'price'));
+        Service::create($request->only('name', 'description', 'price', 'image_url'));
 
         return redirect()->route('services.index')->with('success', 'Service créé avec succès.');
     }

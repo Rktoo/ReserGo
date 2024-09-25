@@ -34,6 +34,12 @@ return [
         'heading' => 'About Our Application',
         'paragraph_1' => 'Our booking application aims to simplify the service reservation process for our users. Whether it is for beauty, leisure, or wellness services, we are here to help you find the perfect service.',
         'paragraph_2' => 'We believe in simplicity and efficiency, which is why we designed this application with an intuitive user interface.',
+        'feature_title_1' => 'Easy to Use Interface',
+        'feature_description_1' => 'Our application offers a clean and simple design that allows users to navigate easily and make reservations quickly.',
+        'feature_title_2' => 'Wide Range of Services',
+        'feature_description_2' => 'We connect you with a wide variety of services from different providers, making it easy to find what you need.',
+        'cta_text' => 'Want to get in touch or learn more?',
+        'cta_button' => 'Contact Us',
     ],
     'contact' => [
         'title' => 'Contact',

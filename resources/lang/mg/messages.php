@@ -32,8 +32,14 @@ return [
     'about' => [
         'title' => 'Momba anay',
         'heading' => 'Momba ny fampiharana anay',
-        'paragraph_1' => 'Ny fampiharana famandrihanay dia mikendry ny hanamora ny fizotry ny famandrihana ho an\'ny mpampiasa anay. Na ho an\'ny tolotra hatsarana, fialamboly, na fahasalamana, eto izahay hanampy anao hahita ny tolotra tonga lafatra.',
-        'paragraph_2' => 'Mino izahay fa ny fahatsorana sy ny fahombiazana dia zava-dehibe, ary noho izany dia namolavola ity fampiharana ity izahay miaraka amin\'ny interface intuitive ho an\'ny mpampiasa.',
+        'paragraph_1' => "Ny fampiharana fanamarihana anay dia mikendry ny hanamora ny fizotran'ny famandrihana tolotra ho an'ny mpampiasa anay. Na ho an'ny hatsaran-tarehy, fialam-boly, na serivisy fikarakarana vatana, eto izahay hanampy anao hahita ny tolotra mety aminao.",
+        'paragraph_2' => "Mino izahay fa ny fahatsorana sy ny fahombiazana no zava-dehibe, izany no antony nanamboaranay ity fampiharana ity miaraka amin'ny interface mpampiasa tsotra sy mora ampiasaina.",
+        'feature_title_1' => 'Fomba mora ampiasaina',
+        'feature_description_1' => "Ny fampiharana anay dia manana endrika madio sy tsotra, ahafahan'ny mpampiasa mijery sy mamandrika mora foana.",
+        'feature_title_2' => 'Tolotra isan-karazany',
+        'feature_description_2' => "Manome anao tolotra maro isan-karazany avy amin'ny mpanome tolotra samihafa izahay, ka mora ny mahita izay ilainao.",
+        'cta_text' => 'Te-hifandray aminay sa te-hahafantatra bebe kokoa?',
+        'cta_button' => 'Mifandraisa aminay',
     ],
     'contact' => [
         'title' => 'Mifandraisa aminay',

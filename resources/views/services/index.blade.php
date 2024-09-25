@@ -37,6 +37,6 @@
 @endsection
 
 @push('scripts')
-    <script src="{{ asset('js/dashboard.js') }}"></script>
+    {{-- <script src="{{ asset('resources/js/dashboard.js') }}"></script> --}}
     @vite('resources/js/animation.js')
 @endpush

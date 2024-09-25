@@ -56,10 +56,14 @@ class ServiceController extends Controller implements HasMiddleware
 
         $service = Service::findOrFail($id);
 
-        if ($service->image_url) {
-            Storage::disk('public')->delete($service->image_url);
+        if ($request->hasFile('image')) {
+            if ($service->image_url) {
+                Storage::disk('public')->delete($service->image_url);
+            }
+            $imagePath = $this->handleImageUpload($request);
+        } else {
+            $imagePath = $service->image_url;
         }
-        $imagePath = $this->handleImageUpload($request);
 
         $service->update([
             'name' => $request['name'],

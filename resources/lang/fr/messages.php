@@ -26,4 +26,13 @@ return [
         'about' => 'À propos',
         'contact' => 'Contact'
     ],
+    'footer' => [
+        'copyright' => '&copy; :year ReserGo. Tous droits réservés.',
+    ],
+    'about' => [
+        'title' => 'À propos',
+        'heading' => 'À propos de notre application',
+        'paragraph_1' => 'Notre application de réservation vise à simplifier le processus de réservation de services pour nos utilisateurs. Que ce soit pour un service de beauté, de loisirs ou de bien-être, nous sommes là pour vous aider à trouver le service parfait.',
+        'paragraph_2' => 'Nous croyons en l\'importance de la simplicité et de l\'efficacité, c\'est pourquoi nous avons conçu cette application avec une interface utilisateur intuitive.',
+    ],
 ];

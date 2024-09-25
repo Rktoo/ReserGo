@@ -26,4 +26,13 @@ return [
         'about' => 'Momba anay',
         'contact' => 'Mifandraisa'
     ],
+    'footer' => [
+        'copyright' => '&copy; :year ReserGo. Zo rehetra voatokana.',
+    ],
+    'about' => [
+        'title' => 'Momba anay',
+        'heading' => 'Momba ny fampiharana anay',
+        'paragraph_1' => 'Ny fampiharana famandrihanay dia mikendry ny hanamora ny fizotry ny famandrihana ho an\'ny mpampiasa anay. Na ho an\'ny tolotra hatsarana, fialamboly, na fahasalamana, eto izahay hanampy anao hahita ny tolotra tonga lafatra.',
+        'paragraph_2' => 'Mino izahay fa ny fahatsorana sy ny fahombiazana dia zava-dehibe, ary noho izany dia namolavola ity fampiharana ity izahay miaraka amin\'ny interface intuitive ho an\'ny mpampiasa.',
+    ],
 ];

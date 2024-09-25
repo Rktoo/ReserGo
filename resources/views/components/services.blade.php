@@ -22,7 +22,7 @@
                 <a href="{{ route('reservations.create', $service->id) }}"
                     class="text-blue-500 hover:underline underline-offset-2 transition-all duration-200 ease-in-out mt-2 px-2 inline-block">
                     {{-- <img src="{{ asset('storage' . $service->image_url) }}" alt="Service image"
-                        class="hidden group-hover:flex mt-2 max-w-[350px] max-h-[350px] rounded" loading="lazy" /> --}}
+                        class="hidden group-hover:flex mt-2 max-w-[350px] max-h-[350px] rounded" /> --}}
                 </a>
                 {{-- <img src="{{ asset('storage/' . $service->image_url) }}" alt="Service image"
                     class="flex group-hover:hidden absolute top-0 left-1/3 mt-2 max-w-[350px] max-h-[350px] opacity-25 rounded z-10"

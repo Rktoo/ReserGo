@@ -15,10 +15,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
 
-<body class="relative min-h-screen antialiased bg-gradient-to-tr from-gray-50 to-gray-100">
+<body class="relative flex flex-col min-h-screen antialiased bg-gradient-to-tr from-gray-50 to-gray-100">
     @include('components.header')
-    <div class="container mx-auto mb-4 px-4 flex flex-col z-20">
-        <main class="master_ max-w-6xl w-full mx-auto py-6 sm:px-6 lg:px-8 ">
+    <div class="container mx-auto mb-4 px-4 flex-1 z-20">
+        <main class="master_ max-w-6xl w-full mx-auto py-6 sm:px-6 lg:px-8">
             @if ($errors->any() && url()->current() === '/')
                 <div class="mb-4 text-red-500">
                     <ul id="errors_">
@@ -32,12 +32,15 @@
         </main>
     </div>
 
-    <div class="fixed -bottom-20
-    {{-- max-sm:top-[40%] sm:top-[60%] md:top-[50%] lg:top-[40%] xl:top-[10%] --}}
-     w-full  
-    -z-10">
+    <div
+        class="fixed max-[500px]:-bottom-[4.5rem] max-md:-bottom-[8rem] max-lg:-bottom-[12rem]
+         max-xl:-bottom-[14rem]  
+         max-2xl:-bottom-[16rem]  
+        2xl:-bottom-[26rem]
+
+        -bottom-40 w-full -z-10">
         @include('components.animations.vague', [
-            'height' => 600,
+            'height' => 800,
             'fillColor' => '#34BDFF',
             'startY' => 250,
             'controlY1' => 450,
@@ -46,7 +49,6 @@
             'controlY4' => 150,
             'endY' => 550,
         ])
-
     </div>
 
     @include('components.footer')

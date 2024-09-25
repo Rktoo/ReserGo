@@ -15,7 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
 
-<body class="relative antialiased bg-gradient-to-tr from-gray-50 to-gray-100">
+<body class="relative min-h-screen antialiased bg-gradient-to-tr from-gray-50 to-gray-100">
     <header
         class=" flex justify-between items-center gap-2 max-sm:text-xs bg-gradient-to-tr from-blue-400 to-blue-700 text-white ">
         <div class="max-w-6xl w-full mx-auto py-4 px-4 flex flex-col gap-2">
@@ -59,8 +59,8 @@
         </main>
     </div>
     <footer
-        class="fixed bottom-0 left-0 w-full py-2 text-center border-t-2 border-white bg-gradient-to-tr from-blue-400 to-blue-700 text-white z-30">
-        <p class="text-gray-50">&copy; {{ date('Y') }} ReserGo. Tous droits réservés.</p>
+        class="absolute -bottom-4 left-0 w-full py-2 px-4 text-center border-t-2 border-white bg-gradient-to-tr from-blue-400 to-blue-700 text-white z-30">
+        <p class="text-start text-gray-50">&copy; {{ date('Y') }} ReserGo. Tous droits réservés.</p>
     </footer>
 
     @vite('resources/js/errorHandling.js')

@@ -11,7 +11,7 @@
         </div>
 
         <div class="max-w-3xl mx-auto text-center mb-8">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Découvrez Nos Services</h2>
+            <h2 class="text-2xl font-semibold text-black mb-4">Découvrez Nos Services</h2>
             <p class="max-sm:text-start text-gray-600 mb-4">Nous offrons une gamme variée de services adaptés à vos besoins.
                 Que vous soyez à
                 la recherche d'un service de qualité pour un événement spécial ou d'une simple prestation, nous avons ce

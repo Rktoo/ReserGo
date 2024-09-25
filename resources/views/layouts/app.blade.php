@@ -17,27 +17,33 @@
 
 <body class="relative min-h-screen antialiased bg-gradient-to-tr from-gray-50 to-gray-100">
     <header
-        class=" flex justify-between items-center gap-2 max-sm:text-xs bg-gradient-to-tr from-blue-400 to-blue-700 text-white ">
+        class=" flex justify-between items-center gap-2 max-sm:text-xs bg-gradient-to-tr from-[#34BDFF] to-[#2EB9FF] text-white ">
         <div class="max-w-6xl w-full mx-auto py-4 px-4 flex flex-col gap-2">
             <div class="grid  grid-cols-3 justify-between">
                 <div class="col-span-1"></div>
                 <a href="/" class="ml-4 col-span-1">
                     <h1 class="text-3xl max-sm:text-lg text-center font-semibold mr-4">ReserGo </h1>
                 </a>
-                <ul class="flex justify-end items-center space-x-0 max-sm:space-x-2 mr-2">
+                <ul class="flex justify-end items-center space-x-0  mr-2">
                     @auth
-                        <li><a href="{{ route('dashboard.index') }}" class="px-2 max-sm:px-0">Dashboard</a></li>
+                        <li class="py-1 rounded-tl-xl bg-white text-gray-800 cursor-pointer"><a
+                                href="{{ route('dashboard.index') }}" class="px-2 max-sm:px-0">Dashboard</a></li>
                         <li>
                             <form action="{{ route('logout') }}" method="post">
                                 @csrf
-                                <button type="submit" class="px-2 max-sm:px-0">Logout</button>
+                                <button type="submit"
+                                    class="y-1 rounded-br-xl bg-red-400 text-white cursor-pointer">Logout</button>
 
                             </form>
                         </li>
                     @endauth
                     @guest
-                        <li><a href="{{ route('login') }}" class="px-2">Login</a></li>
-                        <li><a href="{{ route('register') }}" class="px-2">Register</a></li>
+                        <li class="py-1 rounded-tl-xl bg-white text-gray-800 cursor-pointer"><a href="{{ route('login') }}"
+                                class="px-2">Login</a>
+                        </li>
+                        <li class="py-1 rounded-br-xl bg-green-400 text-white cursor-pointer"><a
+                                href="{{ route('register') }}" class="px-2">Register</a>
+                        </li>
                     @endguest
                 </ul>
             </div>
@@ -59,7 +65,7 @@
         </main>
     </div>
     <footer
-        class="absolute -bottom-4 left-0 w-full py-2 px-4 text-center border-t-2 border-white bg-gradient-to-tr from-blue-400 to-blue-700 text-white z-30">
+        class="absolute -bottom-4 left-0 w-full py-2 px-4 text-center border-t-2 border-white bg-gradient-to-tr from-[#34BDFF] to-[#2EB9FF] text-white z-30">
         <p class="text-start text-gray-50">&copy; {{ date('Y') }} ReserGo. Tous droits réservés.</p>
     </footer>
 

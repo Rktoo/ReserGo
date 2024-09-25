@@ -71,18 +71,6 @@ class ServiceController extends Controller implements HasMiddleware
         return redirect()->route('services.index')->with('success', 'Service mis à jour avec succès.');
     }
 
-    public function destroy($id)
-    {
-        $service = Service::findOrFail($id);
-
-        if (!$service) {
-            return abort(403);
-        }
-
-        $service->delete();
-        return redirect()->route('services.index')->with('success', 'Service supprimé avec succès.');
-    }
-
     private function validateRequest(Request $request, bool $isCreating)
     {
         $rules = [
@@ -90,7 +78,6 @@ class ServiceController extends Controller implements HasMiddleware
             'description' => 'required|string',
             'price' => ['required', 'regex:/^\d+(\.\d{1,2})?$/'],
         ];
-
         if ($isCreating) {
             $rules['image'] = 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:1024';
         } else {
@@ -109,5 +96,18 @@ class ServiceController extends Controller implements HasMiddleware
         }
 
         return null;
+    }
+
+
+    public function destroy($id)
+    {
+        $service = Service::findOrFail($id);
+
+        if (!$service) {
+            return abort(403);
+        }
+
+        $service->delete();
+        return redirect()->route('services.index')->with('success', 'Service supprimé avec succès.');
     }
 }

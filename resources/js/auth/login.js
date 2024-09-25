@@ -1,4 +1,4 @@
-import { checkFields } from "../functions";
+import { checkFields, error, hiddenMessageWithTimeout } from "../functions";
 
 document.addEventListener('DOMContentLoaded', () => {
     const email = document.querySelector("#email");
@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
             checkFields(e.target);
         });
 
+        hiddenMessageWithTimeout(email, 1500);
+        hiddenMessageWithTimeout(password, 1500);
     }
 
     email.closest('form').addEventListener('submit', function (event) {
@@ -25,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
             email.closest('form').submit();
         }
     });
-
 
 
 });

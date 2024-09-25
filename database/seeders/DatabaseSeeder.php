@@ -55,7 +55,7 @@ class DatabaseSeeder extends Seeder
         User::create([
             'name' => "Administrator",
             'email' => "admin@test.com",
-            'password' => Hash::make('123456'),
+            'password' => Hash::make('12345678'),
             'role' => "admin"
         ]);
         // Boucler sur le tableau des services et les insérer dans la base de données

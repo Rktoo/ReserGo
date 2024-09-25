@@ -14,6 +14,7 @@ export function checkFields(el) {
         } else {
             el.nextElementSibling.classList.add("text-red-400");
         }
+
         if (el.value.length === 0) {
             el.nextElementSibling.textContent = messages[lang].required.replace('{field}', fieldLabel);
             error = true;
@@ -60,3 +61,17 @@ export function checkFields(el) {
 export const checkForForbiddenWords = (text) => {
     return forbiddenWords.some(word => text.toLowerCase().includes(word));
 };
+
+
+export const hiddenMessageWithTimeout = (el, timeOut) => {
+    const laravelMessage = el.nextElementSibling.nextElementSibling
+    if (laravelMessage) {
+        laravelMessage.classList.add("flex");
+        const t = setTimeout(() => {
+            laravelMessage.classList.replace("flex", "hidden");
+        }, timeOut);
+        return () => {
+            clearTimeout(t);
+        }
+    }
+}

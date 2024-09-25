@@ -1,4 +1,4 @@
-import { checkFields } from "./functions";
+import { checkFields, error, hiddenMessageWithTimeout } from "./functions";
 import { messages } from "./messages";
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,6 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
         message.addEventListener('input', (e) => {
             checkFields(e.target);
         });
+
+        hiddenMessageWithTimeout(name, 1500);
+        hiddenMessageWithTimeout(email, 1500);
+        hiddenMessageWithTimeout(message, 1500);
     }
 
     name.closest('form').addEventListener('submit', function (event) {

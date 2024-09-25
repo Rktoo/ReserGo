@@ -1,4 +1,4 @@
-import { checkFields, error } from "../functions";
+import { checkFields, error, hiddenMessageWithTimeout } from "../functions";
 
 document.addEventListener('DOMContentLoaded', () => {
     const name = document.querySelector("#name");
@@ -19,6 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
         passwordConfirmation.addEventListener('input', (e) => {
             checkFields(e.target);
         });
+
+        hiddenMessageWithTimeout(name, 1500);
+        hiddenMessageWithTimeout(email, 1500);
+        hiddenMessageWithTimeout(password, 1500);
+        hiddenMessageWithTimeout(passwordConfirmation, 1500);
     }
 
     email.closest('form').addEventListener('submit', function (event) {

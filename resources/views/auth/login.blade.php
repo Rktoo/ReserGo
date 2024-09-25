@@ -18,7 +18,7 @@
                     class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
                 <span class="text-red-400 text-sm"></span>
                 @error('email')
-                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                    <span class="laravelmessage_ text-red-500 text-sm">{{ $message }}</span>
                 @enderror
             </div>
 
@@ -28,7 +28,7 @@
                     class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
                 <span class="text-red-400 text-sm"></span>
                 @error('password')
-                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                    <span class="laravelmessage_ text-red-500 text-sm">{{ $message }}</span>
                 @enderror
             </div>
 

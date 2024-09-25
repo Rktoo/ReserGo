@@ -1,8 +1,10 @@
 # ReserGo
 
-![Banner](public/reserGo.png)
+![Banner](public/banner/reserGoEn.png)
+![Banner](public/banner/reserGoFr.png)
+![Banner](public/banner/reserGoMg.png)
 
-Bienvenue dans le dépôt de **ReserGo** ! Ce projet est une application de réservation de services en ligne, conçue pour simplifier la réservation et la gestion de diverses prestations. Il a été développé en utilisant Laravel, GSAP pour les animations, et Tailwind CSS pour le style.
+Bienvenue dans le dépôt **ReserGo** ! Ce projet est une application de réservation de services en ligne, conçue pour simplifier la réservation et la gestion de diverses prestations. Il a été développé en utilisant Laravel 11, GSAP pour les animations, et Tailwind CSS pour le style.
 
 ## 📋 Table des matières
 
@@ -22,17 +24,19 @@ Bienvenue dans le dépôt de **ReserGo** ! Ce projet est une application de rés
 
 - 🏛️ **Structure MVC** avec Laravel
 - 🔑 Administration complète des services et réservations avec accès réservé aux administrateurs, permettant la gestion efficace des services proposés et le suivi des réservations clients
+- 🌍 **Internationalisation** : L'application propose un changement de langue dynamique, offrant une expérience utilisateur fluide pour les utilisateurs multilingues.
 - 🎨 **Intégration de Tailwind CSS** pour une interface épurée
-- 🌀 **Animations dynamiques** au scroll avec GSAP
+- 🌀 **Animations dynamiques** avec GSAP
 - ⭐ **Gestion des services populaires** et des offres disponibles
 - 📄 **Pagination des services**
 - 📱 **Interface responsive** pour tous les appareils
+
 
 ## ⚙️ Installation
 
 1. **Clonez le dépôt** :
    ```bash
-   git clone https://github.com/ton-repo/ReserGo.git
+   git clone https://github.com/Rktoo/ReserGo.git
    cd ReserGo
 2. **Installer les dépendances PHP**:
     ```bash
@@ -65,7 +69,7 @@ Bienvenue dans le dépôt de **ReserGo** ! Ce projet est une application de rés
     http://localhost:8000
 3. **Vous avez un compte administrator prédéfini pour tester les fonctionnalités**
     email : admin@test.com
-    password : 123456
+    password : 12345678
 ## 👨‍💻 Crédits
 ### Technologies utilisées :
 🏛️ Laravel : Framework backend utilisé pour la structure MVC.

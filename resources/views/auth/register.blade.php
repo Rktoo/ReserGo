@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="max-w-md mx-auto my-10 bg-white p-5 rounded-lg shadow-md">
-        <h2 class="text-2xl font-semibold text-center text-blue-600 mb-5">S'enregistrer</h2>
+        <h2 class="text-2xl font-semibold text-center text-[#34BDFF] mb-5">S'enregistrer</h2>
 
         @if (session('status'))
             <div class="mb-4 text-sm text-green-600">
@@ -61,7 +61,7 @@
                 </div>
             </div>
             <div class="mt-2 mb-2">
-                <button type="submit" class="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                <button type="submit" class="w-full py-2 px-4 bg-[#34BDFF] text-white rounded-md hover:bg-[#0DB0FF]">
                     Créer un compte
                 </button>
             </div>

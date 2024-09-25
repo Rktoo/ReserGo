@@ -3,8 +3,10 @@
         <h2 class="text-lg font-semibold mb-4">Connectez-vous pour réserver un service</h2>
         <p class="mb-4">Vous pourrez réserver en quelques clics.</p>
         <div class="flex justify-center space-x-2">
-            <a href="{{ route('login') }}" class="bg-blue-600 text-white py-2 px-4 rounded-md">Se connecter</a>
-            <a href="{{ route('register') }}" class="bg-green-600 text-white py-2 px-4 rounded-md">S'inscrire</a>
+            <a href="{{ route('login') }}" class="bg-[#34BDFF] hover:bg-[#0DB0FF] text-white py-2 px-4 rounded-md">Se
+                connecter</a>
+            <a href="{{ route('register') }}"
+                class="bg-green-600 hover:bg-green-400 text-white py-2 px-4 rounded-md">S'inscrire</a>
         </div>
     </div>
 </div>

@@ -3,7 +3,7 @@
         <h2 class="text-xl font-bold mb-4">Redirection en cours</h2>
         <p>Vous serez redirigé vers la page d'accueil dans <span id="countdown"></span>.</p>
         <div class="mt-4">
-            <button id="close-modal" class="py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+            <button id="close-modal" class="py-2 px-4 bg-[#34BDFF] hover:bg-[#0DB0FF] text-white rounded-md">
                 Rester sur cette page
             </button>
         </div>

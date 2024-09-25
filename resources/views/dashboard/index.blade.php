@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Profil')
+@section('title', __('messages.dashboardIndex.title'))
 @section('content')
     <div class="flex justify-between mx-auto px-4">
         <div class="flex flex-col justify-center items-center">
@@ -9,11 +9,11 @@
         <a href="{{ route('dashboard.edit') }}" class="group mr-4 flex items-center space-x-1 text-sm max-sm:text-xs ">
             <img src="{{ asset('images/icons/setting.png') }}" alt="user setting icon"
                 class="w-10 h-8 group-hover:scale-110 transition-transform duration-150 ease-in-out">
-            <span class="max-sm:hidden group-hover:font-semibold">Paramètres</span>
+            <span class="max-sm:hidden group-hover:font-semibold">{{ __('messages.dashboardIndex.settings') }}</span>
         </a>
     </div>
     <div class="container mx-auto my-8">
-        <h2 class="text-2xl font-semibold mb-4">Réservations futures</h2>
+        <h2 class="text-2xl font-semibold mb-4">{{ __('messages.dashboardIndex.future_reservations') }}</h2>
         <ul class="bg-white shadow-md rounded-lg p-4 mb-8">
             @forelse ($futureReservations as $reservation)
                 <li class="flex justify-between items-end border-b border-gray-200 py-2">
@@ -28,20 +28,19 @@
                     </div>
                     <div class="flex text-xs">
                         <a href="{{ route('dashboard.reservations.show', $reservation->id) }}"
-                            class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-l-md">Détails</a>
+                            class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-l-md">{{ __('messages.dashboardIndex.details') }}</a>
 
                         <button type="button" id="annuler_"
                             class="text-white bg-red-500 hover:bg-red-600 px-4 py-2 rounded-r-md"
-                            data-id="{{ $reservation->id }}">Annuler</button>
+                            data-id="{{ $reservation->id }}">{{ __('messages.dashboardIndex.cancel') }}</button>
                     </div>
-
                 </li>
             @empty
-                <li class="text-gray-500">Aucune réservation future.</li>
+                <li class="text-gray-500">{{ __('messages.dashboardIndex.no_future_reservations') }}</li>
             @endforelse
         </ul>
 
-        <h2 class="text-2xl font-semibold mb-4">Réservations passées</h2>
+        <h2 class="text-2xl font-semibold mb-4">{{ __('messages.dashboardIndex.past_reservations') }}</h2>
         <ul class="bg-white/50 shadow-md rounded-lg p-4">
             @forelse ($pastReservations as $reservation)
                 <li class="flex justify-between items-center border-b border-gray-200 py-2">
@@ -51,17 +50,17 @@
                     </div>
                     <div>
                         <a href="{{ route('dashboard.reservations.show', $reservation->id) }}"
-                            class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-l-md">Détails</a>
+                            class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-l-md">{{ __('messages.dashboardIndex.details') }}</a>
                     </div>
                 </li>
             @empty
-                <li class="text-gray-500">Aucune réservation passée.</li>
+                <li class="text-gray-500">{{ __('messages.dashboardIndex.no_past_reservations') }}</li>
             @endforelse
         </ul>
     </div>
     @include('components.confirmation-modal', [
-        'title' => "Confirmer l'annulation",
-        'message' => 'Êtes-vous sûr de vouloir annuler cette réservation ?',
+        'title' => __('messages.dashboardIndex.confirm_cancel_title'),
+        'message' => __('messages.dashboardIndex.confirm_cancel_message'),
     ])
 @endsection
 

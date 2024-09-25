@@ -84,5 +84,47 @@ return [
             'reservation_date' => 'Veuillez entrer une date de réservation valide.'
         ]
     ],
-
+    'dashboardIndex' => [
+        'title' => 'Profil',
+        'future_reservations' => 'Réservations futures',
+        'no_future_reservations' => 'Aucune réservation future.',
+        'past_reservations' => 'Réservations passées',
+        'no_past_reservations' => 'Aucune réservation passée.',
+        'settings' => 'Paramètres',
+        'details' => 'Détails',
+        'cancel' => 'Annuler',
+        'confirm_cancel_title' => 'Confirmer l\'annulation',
+        'confirm_cancel_message' => 'Êtes-vous sûr de vouloir annuler cette réservation ?',
+    ],
+    'dashboardShow' => [
+        'title' => 'Détails de la réservation',
+        'service' => 'Service:',
+        'reservation_date' => 'Date de la réservation:',
+        'client_name' => 'Nom du client:',
+        'client_email' => 'Email du client:',
+        'edit' => 'Modifier',
+        'back_to_reservations' => 'Retour à vos réservations',
+    ],
+    'dashboardEdit' => [
+        'title' => 'Paramètres du compte',
+        'account_settings' => 'Paramètres du compte',
+        'change_name' => 'Modifier votre nom d\'utilisateur',
+        'name' => 'Nom',
+        'update_name' => 'Mettre à jour le nom',
+        'change_password' => 'Modifier le mot de passe',
+        'new_password' => 'Nouveau mot de passe',
+        'confirm_password' => 'Confirmer le mot de passe',
+        'update_password' => 'Mettre à jour le mot de passe',
+        'delete_account' => 'Supprimer le compte',
+        'confirm_deletion_title' => 'Confirmer la suppression',
+        'confirm_deletion_message' => 'Êtes-vous sûr de vouloir supprimer votre compte ?',
+    ],
+    'serviceIndex' => [
+        'title' => 'Services',
+        'add_service' => 'Ajouter un Service',
+        'confirm_cancel' => 'Confirmer l\'annulation',
+        'confirm_message' => 'Êtes-vous sûr de vouloir annuler cette réservation ?',
+        'modify' => 'Modifier',
+        'delete' => 'Supprimer',
+    ],
 ];

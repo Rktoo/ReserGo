@@ -22,6 +22,7 @@
         </form>
     </div>
     @if (session('success'))
-        <p class="p-2 bg-white text-green-500 text-center  rounded-tl-xl rounded-br-xl">{{ session('success') }}</p>
+        <p class="p-2 max-sm:text-xs text-sm bg-white text-green-500 text-center  rounded-tl-xl rounded-br-xl">
+            {{ session('success') }}</p>
     @endif
 </div>

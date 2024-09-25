@@ -15,7 +15,7 @@
                     Réservation:</label>
                 <input id="reservation_date" type="datetime-local" name="reservation_date" required
                     value="{{ $reservation->reservation_date }}"
-                    class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-[#34BDFF] ">
                 @error('reservation_date')
                     <span class="text-red-500 text-sm">{{ $message }}</span>
                 @enderror

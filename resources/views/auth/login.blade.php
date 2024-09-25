@@ -14,7 +14,7 @@
             @csrf
             <div class="mb-4">
                 <label for="email" class="block text-sm font-medium text-gray-700">Adresse e-mail</label>
-                <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus
+                <input id="email" type="email" name="email" value="{{ old('email') }}" autofocus
                     class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
                 @error('email')
                     <span class="text-red-500 text-sm">{{ $message }}</span>
@@ -23,7 +23,7 @@
 
             <div class="mb-4">
                 <label for="password" class="block text-sm font-medium text-gray-700">Mot de passe</label>
-                <input id="password" type="password" name="password" required
+                <input id="password" type="password" name="password"
                     class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
                 @error('password')
                     <span class="text-red-500 text-sm">{{ $message }}</span>
@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="mt-2 mb-2">
-                <button type="submit" class="w-full py-2 px-4 bg-[#34BDFF] text-white rounded-md hover:bg-[#0DB0FF]">
+                <button type="submit" class="w-full py-2 px-4 bg-[#34BDFF] hover:bg-[#0DB0FF] text-white rounded-md ">
                     Connexion
                 </button>
             </div>

@@ -5,7 +5,7 @@
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mx-2">
             <h1 class="text-2xl max-sm:text-xl mt-2 font-semibold">Vos Réservations</h1>
             <a href="{{ route('reservations.create') }}"
-                class="inline-block mt-2 py-2 px-4 max-sm:text-sm text-nowrap bg-blue-600 text-white rounded-md hover:bg-blue-700">Créer
+                class="inline-block mt-2 py-2 px-4 max-sm:text-sm text-nowrap bg-[#34BDFF] hover:bg-[#0DB0FF] text-white rounded-md ">Créer
                 une réservation</a>
         </div>
         <div class="mt-4 max-sm:text-sm">

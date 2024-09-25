@@ -21,7 +21,7 @@
                 <textarea id="message" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm min-h-12 max-h-64" rows="4"
                     placeholder="Votre message" required></textarea>
             </div>
-            <button type="submit" class="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+            <button type="submit" class="w-full py-2 px-4 bg-[#34BDFF] hover:bg-[#0DB0FF] text-white rounded-md ">
                 Envoyer
             </button>
         </form>

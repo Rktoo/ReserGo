@@ -26,13 +26,13 @@
                 </a>
                 <ul class="flex justify-end items-center space-x-0  mr-2">
                     @auth
-                        <li class="py-1 rounded-tl-xl bg-white text-gray-800 cursor-pointer"><a
+                        <li class="py-1 rounded-tl-xl bg-gray-50 hover:bg-white text-gray-800 cursor-pointer"><a
                                 href="{{ route('dashboard.index') }}" class="px-2 max-sm:px-0">Dashboard</a></li>
                         <li>
                             <form action="{{ route('logout') }}" method="post">
                                 @csrf
                                 <button type="submit"
-                                    class="y-1 rounded-br-xl bg-red-400 text-white cursor-pointer">Logout</button>
+                                    class="p-1 rounded-br-xl bg-red-400 hover:bg-red-500 text-white cursor-pointer">Logout</button>
 
                             </form>
                         </li>
@@ -52,7 +52,7 @@
     </header>
     <div class="container mx-auto mb-4 px-4 flex flex-col">
         <main class="master_ max-w-6xl w-full mx-auto py-6 sm:px-6 lg:px-8">
-            @if ($errors->any())
+            @if ($errors->any() && url()->current() === '/')
                 <div class="mb-4 text-red-500">
                     <ul id="errors_">
                         @foreach ($errors->all() as $error)
@@ -65,8 +65,10 @@
         </main>
     </div>
     <footer
-        class="absolute -bottom-4 left-0 w-full py-2 px-4 text-center border-t-2 border-white bg-gradient-to-tr from-[#34BDFF] to-[#2EB9FF] text-white z-30">
-        <p class="text-start text-gray-50">&copy; {{ date('Y') }} ReserGo. Tous droits réservés.</p>
+        class="absolute -bottom-4 left-0 py-2 w-full bg-gradient-to-tr from-[#34BDFF] to-[#2EB9FF] text-white border-t-2 border-white z-30">
+        <div class="max-w-6xl mx-auto w-full  sm:px-6 lg:px-8 text-center  ">
+            <p class=" text-start text-gray-50">&copy; {{ date('Y') }} ReserGo. Tous droits réservés.</p>
+        </div>
     </footer>
 
     @vite('resources/js/errorHandling.js')

@@ -14,7 +14,7 @@
             @csrf
             <div class="mb-4">
                 <label for="name" class="block text-sm font-medium text-gray-700">Nom</label>
-                <input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus
+                <input id="name" type="text" name="name" value="{{ old('name') }}" autofocus
                     class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                     placeholder="Votre nom">
                 @error('name')
@@ -23,7 +23,7 @@
             </div>
             <div class="mb-4">
                 <label for="email" class="block text-sm font-medium text-gray-700">Adresse e-mail</label>
-                <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus
+                <input id="email" type="email" name="email" value="{{ old('email') }}" autofocus
                     class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                     placeholder="Votre adresse email">
                 @error('email')
@@ -33,7 +33,7 @@
 
             <div class="mb-4">
                 <label for="password" class="block text-sm font-medium text-gray-700">Mot de passe</label>
-                <input id="password" type="password" name="password" required
+                <input id="password" type="password" name="password"
                     class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                     placeholder="Votre mot de passe">
                 @error('password')
@@ -43,7 +43,7 @@
 
             <div class="mb-4">
                 <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Confirmation</label>
-                <input id="password_confirmation" type="password" name="password_confirmation" required
+                <input id="password_confirmation" type="password" name="password_confirmation"
                     class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                     placeholder="Confirmer le mot de passe">
                 @error('password_confirmation')
@@ -53,7 +53,7 @@
 
             <div class=" flex justify-between text-sm max-sm:text-xs">
 
-                <div class="mb-1 flex justify-between w-full px-6 gap-1">
+                <div class="mb-1 flex justify-end w-full px-6 gap-1">
                     <p class="text-gray-800">Vous avez déjà un compte ?</p>
                     <a href="{{ route('login') }}"
                         class="text-blue-400 hover:underline hover:underline-offset-2 transition-all duration-200 ease-in-out">Cliquer

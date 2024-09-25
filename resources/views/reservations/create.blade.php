@@ -58,12 +58,12 @@
             <div class="mb-4">
                 <label for="date" class="block text-sm font-medium text-gray-700">Date de réservation</label>
                 <input type="datetime-local" name="reservation_date" id="date" value="{{ old('reservation_date') }}"
-                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" required>
+                    class="mt-1 block w-full border-gray-300 focus:ring-[#34BDFF] rounded-md shadow-sm" required>
                 @error('reservation_date')
                     <span class="text-red-500 text-sm">{{ $message }}</span>
                 @enderror
             </div>
-            <button type="submit" class="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+            <button type="submit" class="w-full py-2 px-4 bg-[#34BDFF] hover:bg-[#0DB0FF]  text-white rounded-md ">
                 Réserver
             </button>
         </form>

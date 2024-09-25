@@ -38,7 +38,7 @@
                            file:mr-4 file:py-2 file:px-4
                            file:rounded-md file:border-0
                            file:text-sm file:font-semibold
-                           file:bg-blue-50 file:text-blue-700
+                           file:bg-blue-50 file:text-[#34BDFF]
                            hover:file:bg-blue-100" />
                 @error('image')
                     <span class="text-red-500 text-sm">{{ $message }}</span>
@@ -52,7 +52,7 @@
                 @endif
             </div>
 
-            <button type="submit" class="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+            <button type="submit" class="w-full py-2 px-4 bg-[#34BDFF] hover:bg-[#0DB0FF] text-white rounded-md ">
                 Mettre à jour le Service
             </button>
         </form>

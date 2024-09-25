@@ -31,7 +31,7 @@ export function checkFields(el) {
                 error = true;
             } else {
                 el.nextElementSibling.classList.replace("text-red-400", "text-green-400")
-                el.nextElementSibling.textContent = "Excellent";
+                el.nextElementSibling.textContent = messages[lang].excellent;
             }
         } else if (el.name === "message" && el.value.trim().length <= 20) {
             el.nextElementSibling.textContent = messages[lang].message_length.replace('{field}', fieldLabel);
@@ -52,7 +52,7 @@ export function checkFields(el) {
             error = true;
         } else {
             el.nextElementSibling.classList.replace("text-red-400", "text-green-400")
-            el.nextElementSibling.textContent = "Excellent";
+            el.nextElementSibling.textContent = messages[lang].excellent;
             error = false;
         }
     }

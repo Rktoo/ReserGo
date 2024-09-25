@@ -8,7 +8,8 @@ export const messages = {
         password_length: 'The "{field}" field must be more than 7 characters.',
         password_confirmation: 'The passwords doesn\'t match.',
         message_length: 'The "{field}" field must be more than 20 characters.',
-        inappropriate_message: 'Your message contains inappropriate language. Modify it.'
+        inappropriate_message: 'Your message contains inappropriate language. Modify it.',
+        excellent: 'Excellent',
     },
     fr: {
         required: '"{field}" ne peut pas être vide.',
@@ -18,7 +19,8 @@ export const messages = {
         password_length: 'Le champ "{field}" doit contenir plus de 7 caractères.',
         password_confirmation: 'Les mots de passe ne correspondent pas.',
         message_length: 'Le champ "{field}" doit contenir plus de 20 caractères.',
-        inappropriate_message: 'Votre message contient un langage inapproprié. Modifiez-le.'
+        inappropriate_message: 'Votre message contient un langage inapproprié. Modifiez-le.',
+        excellent: 'Excellent',
     },
     mg: {
         required: 'Tsy afaka ho foana ny "{field}".',
@@ -28,6 +30,7 @@ export const messages = {
         password_length: 'Ny sehatra "{field}" dia tsy maintsy manana litera mihoatra ny 7.',
         password_confirmation: 'Tsy mitovy ny teny miafina',
         message_length: 'Ny sehatra "{field}" dia tsy maintsy manana litera mihoatra ny 20.',
-        inappropriate_message: 'Misy teny tsy mendrika ao amin\'ny hafatrao. Azafady ovay.'
+        inappropriate_message: 'Misy teny tsy mendrika ao amin\'ny hafatrao. Azafady ovay.',
+        excellent: 'Tsara',
     }
 };

@@ -19,8 +19,10 @@
     <header
         class=" flex justify-between items-center gap-2 max-sm:text-xs bg-gradient-to-tr from-[#34BDFF] to-[#2EB9FF] text-white ">
         <div class="max-w-6xl w-full mx-auto py-4 px-4 flex flex-col gap-2">
-            <div class="grid  grid-cols-3 justify-between">
-                <div class="col-span-1"></div>
+            <div class="grid grid-cols-3 justify-between items-center">
+                <div class="col-span-1">
+                    @include('components.language-switcher')
+                </div>
                 <a href="/" class="ml-4 col-span-1">
                     <h1 class="text-3xl max-sm:text-lg text-center font-semibold mr-4">ReserGo </h1>
                 </a>

@@ -39,3 +39,19 @@ Route::middleware('auth')->group(function () {
 });
 route::view('/about', 'pages.about')->name('about');
 route::view('/contact', 'pages.contact')->name('contact');
+
+
+Route::get('/lang/{lang}', function ($lang) {
+    session(['locale' => $lang]);
+
+
+    $messages = [
+        'en' => 'Language changed to ',
+        'mg' => 'Niova fiteny ho ',
+        'fr' => 'Langue changée en ',
+    ];
+
+    $phrase = $messages[$lang] ?? $messages['fr'];
+
+    return redirect()->back()->with('success', $phrase . strtoupper($lang));
+})->name('change.language');

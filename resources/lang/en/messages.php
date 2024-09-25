@@ -146,6 +146,10 @@ return [
         'update_button' => 'Update Service',
         'current_image' => 'Current Image:',
     ],
+    'serviceList' => [
+        'popular_services' => 'Popular Services',
+        'book_service' => 'Book this service',
+    ],
     'login' => [
         'title' => 'Login',
         'email' => 'Email Address',

@@ -90,7 +90,7 @@ return [
         'no_future_reservations' => 'Tsy misy fanamiana ho avy.',
         'past_reservations' => 'Fanaraha ny fanamiana taloha',
         'no_past_reservations' => 'Tsy misy fanamiana taloha.',
-        'settings' => 'Fikirana',
+        'settings' => 'Tefy',
         'details' => 'Antsipirihany',
         'cancel' => 'Manafoana',
         'confirm_cancel_title' => 'Manamarina ny fanafoanana',
@@ -145,6 +145,10 @@ return [
         'service_image' => 'Sary',
         'update_button' => 'Havaozy ny Serivisy',
         'current_image' => 'Sary ankehitriny :',
+    ],
+    'serviceList' => [
+        'popular_services' => 'Serivisy malaza',
+        'book_service' => 'Hamandrika ity serivisy ity',
     ],
     'login' => [
         'title' => 'Fidirana',

@@ -146,6 +146,10 @@ return [
         'update_button' => 'Mettre à jour le Service',
         'current_image' => 'Image actuelle :',
     ],
+    'serviceList' => [
+        'popular_services' => 'Services populaires',
+        'book_service' => 'Réserver ce service',
+    ],
     'login' => [
         'title' => 'Connexion',
         'email' => 'Adresse e-mail',

@@ -1,5 +1,5 @@
 <div>
-    <div class="flex justify-start items-center space-x-2">
+    <div class="flex justify-start items-center space-x-1">
         <form action="{{ route('change.language', ['lang' => 'fr']) }}" method="GET" class="inline">
             <button type="submit"
                 class="@if (session('locale') === 'fr') scale-105 @else opacity-60 @endif flex justify-center items-center hover:opacity-100 transition-all duration-200 ease-in-out">

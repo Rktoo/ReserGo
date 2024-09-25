@@ -5,7 +5,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\UserDashboardController;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 
 Route::get('/', function () {
     return view('welcome');
@@ -42,7 +44,12 @@ route::view('/contact', 'pages.contact')->name('contact');
 
 
 Route::get('/lang/{lang}', function ($lang) {
-    session(['locale' => $lang]);
+
+    if (in_array($lang, ['en', 'fr', 'mg'])) {
+        App::setLocale($lang);
+        Session::put('locale', $lang);
+        // session(['locale' => $lang]);
+    }
 
 
     $messages = [

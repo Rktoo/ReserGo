@@ -28,28 +28,29 @@
                 </a>
                 <ul class="flex justify-end items-center space-x-0  mr-2">
                     @auth
-                        <li class="py-1 rounded-tl-xl bg-gray-50 hover:bg-white text-gray-800 cursor-pointer"><a
-                                href="{{ route('dashboard.index') }}" class="px-2 max-sm:px-0">Dashboard</a></li>
+                        <li class="py-1 max-sm:px-1  rounded-tl-xl bg-gray-50 hover:bg-white text-gray-800 cursor-pointer">
+                            <a href="{{ route('dashboard.index') }}" class="px-2 max-sm:px-0">Dashboard</a>
+                        </li>
                         <li>
                             <form action="{{ route('logout') }}" method="post">
                                 @csrf
                                 <button type="submit"
-                                    class="p-1 rounded-br-xl bg-red-400 hover:bg-red-500 text-white cursor-pointer">Logout</button>
+                                    class="p-1 max-sm:px-1 rounded-br-xl bg-red-400 hover:bg-red-500 text-white cursor-pointer">Logout</button>
 
                             </form>
                         </li>
                     @endauth
                     @guest
-                        <li class="py-1 rounded-tl-xl bg-white text-gray-800 cursor-pointer"><a href="{{ route('login') }}"
-                                class="px-2">Login</a>
+                        <li class="py-1 max-sm:px-1  rounded-tl-xl bg-white text-gray-800 cursor-pointer"><a
+                                href="{{ route('login') }}" class="px-2">Login</a>
                         </li>
-                        <li class="py-1 rounded-br-xl bg-green-400 text-white cursor-pointer"><a
+                        <li class="py-1 max-sm:px-1  rounded-br-xl bg-green-400 text-white cursor-pointer"><a
                                 href="{{ route('register') }}" class="px-2">Register</a>
                         </li>
                     @endguest
                 </ul>
             </div>
-            @include('layouts.navbar')
+            @include('components.navbar')
         </div>
     </header>
     <div class="container mx-auto mb-4 px-4 flex flex-col">

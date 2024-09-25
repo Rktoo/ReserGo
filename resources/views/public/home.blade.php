@@ -5,7 +5,8 @@
     $servicePopulaires = ['Service de nettoyage professionnel', 'Coiffure et soins de beauté', "Organisation d'événements et de fêtes", 'Consultation et coaching personnel', "Services de réparation et d'entretien à domicile", "Et bien d'autres encore !"];
     ?>
     <div class="my-2 py-4 ">
-        <div class="w-auto mb-6 flex flex-col justify-center items-center space-y-2 bg-white p-4 rounded-lg overflow-hidden">
+        <div
+            class="w-auto mb-6 flex flex-col justify-center items-center space-y-2 bg-white p-4 rounded-lg shadow-sm overflow-hidden">
             <h1 class="title_ max-sm:text-center text-3xl font-bold opacity-0">Bienvenue sur ReserGo</h1>
             <p class="subtitle_ max-sm:text-center text-gray-700 opacity-0">Réservez vos services facilement en ligne !</p>
         </div>

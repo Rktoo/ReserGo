@@ -8,18 +8,21 @@
         <form>
             <div class="mb-4">
                 <label for="name" class="block text-sm font-medium text-gray-700">Nom</label>
-                <input type="text" id="name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
-                    placeholder="Votre nom" required>
+                <input type="text" id="name" name="name"
+                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" placeholder="Votre nom">
+                <span class="text-red-400"></span>
             </div>
             <div class="mb-4">
                 <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                <input type="email" id="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
-                    placeholder="Votre adresse email" required>
+                <input type="email" id="email" name="email"
+                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" placeholder="Votre adresse email">
+                <span class="text-red-400"></span>
             </div>
             <div class="mb-4">
                 <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                <textarea id="message" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm min-h-12 max-h-64" rows="4"
-                    placeholder="Votre message" required></textarea>
+                <textarea id="message" name="message" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm min-h-12 max-h-64"
+                    rows="4" placeholder="Votre message"></textarea>
+                <span class="text-red-400"></span>
             </div>
             <button type="submit" class="w-full py-2 px-4 bg-[#34BDFF] hover:bg-[#0DB0FF] text-white rounded-md ">
                 Envoyer

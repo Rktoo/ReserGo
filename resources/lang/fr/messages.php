@@ -35,4 +35,18 @@ return [
         'paragraph_1' => 'Notre application de réservation vise à simplifier le processus de réservation de services pour nos utilisateurs. Que ce soit pour un service de beauté, de loisirs ou de bien-être, nous sommes là pour vous aider à trouver le service parfait.',
         'paragraph_2' => 'Nous croyons en l\'importance de la simplicité et de l\'efficacité, c\'est pourquoi nous avons conçu cette application avec une interface utilisateur intuitive.',
     ],
+    'contact' => [
+        'title' => 'Contact',
+        'heading' => 'Contactez-nous',
+        'paragraph' => 'Si vous avez des questions, des commentaires ou des préoccupations, n\'hésitez pas à nous contacter. Remplissez le formulaire ci-dessous et nous vous répondrons dès que possible.',
+        'form' => [
+            'name' => 'Nom',
+            'email' => 'Email',
+            'message' => 'Message',
+            'submit' => 'Envoyer',
+            'name_placeholder' => 'Votre nom',
+            'email_placeholder' => 'Votre adresse email',
+            'message_placeholder' => 'Votre message',
+        ],
+    ],
 ];

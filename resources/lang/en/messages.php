@@ -35,4 +35,18 @@ return [
         'paragraph_1' => 'Our booking application aims to simplify the service reservation process for our users. Whether it is for beauty, leisure, or wellness services, we are here to help you find the perfect service.',
         'paragraph_2' => 'We believe in simplicity and efficiency, which is why we designed this application with an intuitive user interface.',
     ],
+    'contact' => [
+        'title' => 'Contact',
+        'heading' => 'Contact Us',
+        'paragraph' => 'If you have any questions, comments, or concerns, feel free to contact us. Fill out the form below and we will respond as soon as possible.',
+        'form' => [
+            'name' => 'Name',
+            'email' => 'Email',
+            'message' => 'Message',
+            'submit' => 'Send',
+            'name_placeholder' => 'Your name',
+            'email_placeholder' => 'Your email address',
+            'message_placeholder' => 'Your message',
+        ],
+    ],
 ];

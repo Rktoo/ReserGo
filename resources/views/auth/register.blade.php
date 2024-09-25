@@ -17,6 +17,7 @@
                 <input id="name" type="text" name="name" value="{{ old('name') }}" autofocus
                     class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                     placeholder="Votre nom">
+                <span class="text-red-400 text-sm"></span>
                 @error('name')
                     <span class="text-red-500 text-sm">{{ $message }}</span>
                 @enderror
@@ -26,6 +27,7 @@
                 <input id="email" type="email" name="email" value="{{ old('email') }}" autofocus
                     class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                     placeholder="Votre adresse email">
+                <span class="text-red-400 text-sm"></span>
                 @error('email')
                     <span class="text-red-500 text-sm">{{ $message }}</span>
                 @enderror
@@ -36,6 +38,7 @@
                 <input id="password" type="password" name="password"
                     class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                     placeholder="Votre mot de passe">
+                <span class="text-red-400 text-sm"></span>
                 @error('password')
                     <span class="text-red-500 text-sm">{{ $message }}</span>
                 @enderror
@@ -46,6 +49,7 @@
                 <input id="password_confirmation" type="password" name="password_confirmation"
                     class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                     placeholder="Confirmer le mot de passe">
+                <span class="text-red-400 text-sm"></span>
                 @error('password_confirmation')
                     <span class="text-red-500 text-sm">{{ $message }}</span>
                 @enderror
@@ -68,3 +72,7 @@
         </form>
     </div>
 @endsection
+
+@push('scripts')
+    @vite('resources/js/auth/register.js')
+@endpush

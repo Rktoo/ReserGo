@@ -16,6 +16,7 @@
                 <label for="email" class="block text-sm font-medium text-gray-700">Adresse e-mail</label>
                 <input id="email" type="email" name="email" value="{{ old('email') }}" autofocus
                     class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                <span class="text-red-400 text-sm"></span>
                 @error('email')
                     <span class="text-red-500 text-sm">{{ $message }}</span>
                 @enderror
@@ -25,6 +26,7 @@
                 <label for="password" class="block text-sm font-medium text-gray-700">Mot de passe</label>
                 <input id="password" type="password" name="password"
                     class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                <span class="text-red-400 text-sm"></span>
                 @error('password')
                     <span class="text-red-500 text-sm">{{ $message }}</span>
                 @enderror
@@ -58,3 +60,7 @@
         </form>
     </div>
 @endsection
+
+@push('scripts')
+    @vite('resources/js/auth/login.js')
+@endpush

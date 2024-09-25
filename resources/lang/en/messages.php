@@ -127,4 +127,23 @@ return [
         'modify' => 'Modify',
         'delete' => 'Delete',
     ],
+    'serviceCreate' => [
+        'title' => 'Create Service',
+        'add_service' => 'Add a Service',
+        'service_name' => 'Service Name',
+        'service_description' => 'Service Description',
+        'service_price' => 'Price',
+        'service_image' => 'Image',
+        'create_button' => 'Create Service',
+    ],
+    'serviceEdit' => [
+        'title' => 'Edit Service',
+        'edit_service' => 'Edit a Service',
+        'service_name' => 'Service Name',
+        'service_description' => 'Service Description',
+        'service_price' => 'Price',
+        'service_image' => 'Image',
+        'update_button' => 'Update Service',
+        'current_image' => 'Current Image:',
+    ],
 ];

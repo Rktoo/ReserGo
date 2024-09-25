@@ -127,4 +127,23 @@ return [
         'modify' => 'Ovaina',
         'delete' => 'Fafao',
     ],
+    'serviceCreate' => [
+        'title' => 'Famoronana Serivisy',
+        'add_service' => 'Ampidiro ny Serivisy',
+        'service_name' => 'Anaran\'ny Serivisy',
+        'service_description' => 'Famaritana',
+        'service_price' => 'Vidiny',
+        'service_image' => 'Sary',
+        'create_button' => 'Ampiditra ny Serivisy',
+    ],
+    'serviceEdit' => [
+        'title' => 'Fanavaozana Serivisy',
+        'edit_service' => 'Manavao ny Serivisy',
+        'service_name' => 'Anaran\'ny Serivisy',
+        'service_description' => 'Famaritana',
+        'service_price' => 'Vidiny',
+        'service_image' => 'Sary',
+        'update_button' => 'Havaozy ny Serivisy',
+        'current_image' => 'Sary ankehitriny :',
+    ],
 ];

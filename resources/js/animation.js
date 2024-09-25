@@ -26,9 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
     function afterTitle() {
         if (serviceList) {
             gsap.fromTo(serviceList,
-                { opacity: 0, x: 100 },
+                { opacity: 0, autoAlpha: 0, x: 100 },
                 {
                     opacity: 1,
+                    autoAlpha: 1,
                     x: 0,
                     duration: 1,
                     stagger: 0.4,
@@ -47,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 });
             }, {
-                threshold: 0.4
+                threshold: 0.56
             });
             elements.forEach(el => observer.observe(el));
         }
@@ -61,7 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         y: 0,
                         duration: 0.7,
                         stagger: 0.5,
-                        ease: "power2.out"
+                        ease: "power2.out",
+                        clearProps: 'all'
                     }
                 );
             });

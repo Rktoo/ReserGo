@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', __('messages.contact.title'))
 @section('content')
-    <div class="max-w-lg mx-auto my-10 p-5 bg-white rounded shadow">
+    <div class="max-w-lg mx-auto my-10 p-5 max-sm:text-sm bg-white rounded shadow">
         <h1 class="text-2xl font-semibold mb-4">@lang('messages.contact.heading')</h1>
         <p class="mb-4">@lang('messages.contact.paragraph')</p>
         <form>

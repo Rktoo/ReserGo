@@ -49,4 +49,28 @@ return [
             'message_placeholder' => 'Ny hafatrao',
         ],
     ],
+    'reservationIndex' => [
+        'title' => 'Famandrihana',
+        'heading' => 'Ny Famandrihanao',
+        'create' => 'Mametraha famandrihana',
+        'service_name' => 'Tolotra',
+        'service_description' => 'Mombamomba',
+        'date' => 'Daty',
+        'time' => 'Ora',
+        'reserved_by' => 'Nomanin\'i',
+    ],
+    'reservationCreate' => [
+        'title' => 'Famoronana fanamiana',
+        'heading' => 'Manaova Fanamiana',
+        'guest_modal' => 'Mba midira raha te-hanao fanamiana.',
+        'select_user' => 'Fidio ny mpampiasa',
+        'select_service' => 'Fidio ny serivisy',
+        'reservation_date' => 'Daty fanamiana',
+        'submit' => 'Manaova fanamiana',
+        'errors' => [
+            'user' => 'Azafady, fidio ny mpampiasa manan-kery.',
+            'service_id' => 'Azafady, fidio ny serivisy manan-kery.',
+            'reservation_date' => 'Azafady, ampiasao ny daty fanamiana manan-kery.'
+        ]
+    ]
 ];

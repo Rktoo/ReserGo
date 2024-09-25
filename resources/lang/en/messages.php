@@ -49,4 +49,28 @@ return [
             'message_placeholder' => 'Your message',
         ],
     ],
+    'reservationIndex' => [
+        'title' => 'Reservations',
+        'heading' => 'Your Reservations',
+        'create' => 'Create a Reservation',
+        'service_name' => 'Service',
+        'service_description' => 'Description',
+        'date' => 'Date',
+        'time' => 'Time',
+        'reserved_by' => 'Reserved by',
+    ],
+    'reservationCreate' => [
+        'title' => 'Create Reservation',
+        'heading' => 'Make a Reservation',
+        'guest_modal' => 'Please log in to make a reservation.',
+        'select_user' => 'Select a user',
+        'select_service' => 'Select your service',
+        'reservation_date' => 'Reservation Date',
+        'submit' => 'Reserve',
+        'errors' => [
+            'user' => 'Please select a valid user.',
+            'service_id' => 'Please select a valid service.',
+            'reservation_date' => 'Please enter a valid reservation date.'
+        ]
+    ]
 ];

@@ -72,5 +72,16 @@ return [
             'service_id' => 'Azafady, fidio ny serivisy manan-kery.',
             'reservation_date' => 'Azafady, ampiasao ny daty fanamiana manan-kery.'
         ]
-    ]
+    ],
+    'reservationEdit' => [
+        'title' => 'Fanaraha ny fanamiana',
+        'heading' => 'Ovay ny fanamiana',
+        'service_name' => 'Anaran\'ny Serivisy',
+        'new_reservation_date' => 'Daty fanamiana vaovao :',
+        'submit' => 'Havaozina',
+        'back_to_reservations' => 'Miverena amin\'ny fanamiana',
+        'errors' => [
+            'reservation_date' => 'Azafady, ampiasao ny daty fanamiana manan-kery.'
+        ]
+    ],
 ];

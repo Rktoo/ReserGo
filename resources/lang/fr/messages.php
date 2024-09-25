@@ -72,5 +72,17 @@ return [
             'service_id' => 'Veuillez sélectionner un service valide.',
             'reservation_date' => 'Veuillez entrer une date de réservation valide.'
         ]
-    ]
+    ],
+    'reservationEdit' => [
+        'title' => 'Édition réservation',
+        'heading' => 'Modifier la Réservation',
+        'service_name' => 'Nom du Service',
+        'new_reservation_date' => 'Nouvelle Date de Réservation :',
+        'submit' => 'Mettre à jour',
+        'back_to_reservations' => 'Retour à vos réservations',
+        'errors' => [
+            'reservation_date' => 'Veuillez entrer une date de réservation valide.'
+        ]
+    ],
+
 ];

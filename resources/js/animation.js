@@ -90,9 +90,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!title_) afterTitle();
     // window.addEventListener('popstate', animateMainContent);
 
+    // Scroll
     if (scrollBtn && sectionList) {
         scrollBtn.addEventListener("click", () => {
-            // sectionList.scrollIntoView({ behavior: "smooth", block: "start" })
             let i = 100;
             const t = setInterval(() => {
 
@@ -111,7 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         function scrollToContent(position) {
             window.scrollTo({ top: position, behavior: "smooth" })
-
         }
     }
 });

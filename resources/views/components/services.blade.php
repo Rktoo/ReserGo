@@ -15,10 +15,10 @@
                     <div class="w-full grid grid-cols-2 gap-1">
                         <a href="{{ route('reservations.create', $service->id) }}"
                             class="col-span-1 inline-block py-2 px-4 bg-green-400 hover:bg-green-500 text-white rounded-md">
-                            <span class="flex max-md:hidden justify-center items-center">
+                            <span class="flex max-lg:hidden justify-center items-center">
                                 {{ __('messages.serviceList.book_service') }}
                             </span>
-                            <span class="flex md:hidden justify-center items-center">
+                            <span class="flex lg:hidden justify-center items-center">
 
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="green"
                                     class="w-6 h-6" aria-hidden="true" data-slot="icon">
@@ -32,11 +32,10 @@
                         </a>
                         <a href="{{ route('services.show', $service->id) }}"
                             class="col-span-1 inline-block py-2 px-4 bg-[#34BDFF] hover:bg-[#0DB0FF] text-white rounded-md">
-                            <span class="flex max-md:hidden justify-center items-center">
+                            <span class="flex max-lg:hidden justify-center items-center">
                                 {{ __('messages.serviceList.see_service') }}
                             </span>
-                            <span class="flex md:hidden justify-center items-center">
-
+                            <span class="flex lg:hidden justify-center items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"
                                     aria-hidden="true" class="w-6 h-6" data-slot="icon">
                                     <path fill-rule="evenodd"

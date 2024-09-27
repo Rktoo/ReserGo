@@ -22,7 +22,8 @@
         </form>
     </div>
     @if (session('success'))
-        <p class="p-2 max-sm:text-xs text-sm bg-white text-green-500 text-center  rounded-tl-xl rounded-br-xl">
+        <p class="p-2 max-sm:text-xs text-sm bg-white text-green-500 text-center  rounded-tl-xl rounded-br-xl"
+            id="messages_">
             {{ session('success') }}</p>
     @endif
 </div>

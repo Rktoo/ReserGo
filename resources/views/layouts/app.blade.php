@@ -21,7 +21,7 @@
         <main class="master_ max-w-6xl w-full mx-auto py-6 sm:px-6 lg:px-8">
             @if ($errors->any() && url()->current() === '/')
                 <div class="mb-4 text-red-500">
-                    <ul id="errors_">
+                    <ul id="messages_">
                         @foreach ($errors->all() as $error)
                             <li class="text-center">{{ $error }}</li>
                         @endforeach
@@ -53,7 +53,7 @@
 
     @include('components.footer')
 
-    @vite('resources/js/errorHandling.js')
+    @vite('resources/js/messagesHandling.js')
     @stack('scripts')
 </body>
 

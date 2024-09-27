@@ -214,4 +214,11 @@ return [
         'try_again' => 'Réessayez plus tard',
         'contact_support' => 'Contacter le support',
     ],
+    'authModal' => [
+        'title' => 'Connectez-vous pour réserver un service',
+        'description' => 'Vous pourrez réserver en quelques clics.',
+        'login_button' => 'Se connecter',
+        'register_button' => 'S\'inscrire',
+    ],
+
 ];

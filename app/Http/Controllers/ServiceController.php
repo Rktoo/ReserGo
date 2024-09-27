@@ -16,7 +16,9 @@ class ServiceController extends Controller implements HasMiddleware
 
     public static function middleware()
     {
-        return [AdminMiddleware::class];
+        return [
+            new Middleware(AdminMiddleware::class, except: ['show'])
+        ];
     }
     public function index()
     {

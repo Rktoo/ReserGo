@@ -26,7 +26,7 @@
                     <li class="py-1 max-sm:px-1  rounded-tl-xl bg-white text-gray-800 cursor-pointer"><a
                             href="{{ route('login') }}" class="px-2">Login</a>
                     </li>
-                    <li class="py-1 max-sm:px-1  rounded-br-xl bg-green-400 text-white cursor-pointer"><a
+                    <li class="py-1 max-sm:px-1  rounded-br-xl bg-green-400 hover:bg-green-500 text-white cursor-pointer"><a
                             href="{{ route('register') }}" class="px-2">Register</a>
                     </li>
                 @endguest

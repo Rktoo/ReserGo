@@ -73,13 +73,37 @@
 
                 <div class="mt-4 text-center">
                     <div class="grid grid-cols-2 justify-center items-center space-x-2">
-                        <a href="{{ route('services.index') }}"
+                        <a href="{{ route('home') }}"
                             class="col-span-1 inline-block py-2 px-4 bg-gray-400 hover:bg-gray-500 text-white rounded-md">
-                            {{ __('messages.serviceShow.back_button') }}
+                            <span class="flex max-md:hidden justify-center items-center">
+                                {{ __('messages.serviceShow.back_button') }}
+                            </span>
+                            <span class="md:hidden flex justify-center items-center">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-6 h-6"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M11.03 3.97a.75.75 0 0 1 0 1.06l-6.22 6.22H21a.75.75 0 0 1 0 1.5H4.81l6.22 6.22a.75.75 0 1 1-1.06 1.06l-7.5-7.5a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 0 1 1.06 0Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+
+                            </span>
                         </a>
                         <a href="{{ route('contact') }}"
                             class="inline-block py-2 px-6 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg shadow-lg transition duration-200">
-                            {{ __('messages.serviceShow.cta_button') }}
+                            <span class="flex max-md:hidden justify-center items-center">
+                                {{ __('messages.serviceShow.cta_button') }}
+                            </span>
+                            <span class="md:hidden flex justify-center items-center ">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"
+                                    aria-hidden="true" class="w-6 h-6" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+
+                            </span>
                         </a>
                     </div>
                 </div>

@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const reservationCards = document.querySelectorAll('.reservation-card');
     const title_ = document.querySelector('.title_');
     const subtitle_ = document.querySelector(".subtitle_");
+    const scrollBtn = document.querySelector("#scrollOver_");
+    const sectionList = document.querySelector("#section_");
 
     if (title_ && subtitle_) {
         gsap.fromTo(title_,
@@ -87,4 +89,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!title_) afterTitle();
     // window.addEventListener('popstate', animateMainContent);
+
+    if (scrollBtn && sectionList) {
+        scrollBtn.addEventListener("click", () => {
+            // sectionList.scrollIntoView({ behavior: "smooth", block: "start" })
+            let i = 100;
+            const t = setInterval(() => {
+
+                if (i < window.screen.availHeight - 90) {
+                    scrollToContent(i)
+                    i += 100;
+                } else {
+                    return;
+                }
+
+                return () => {
+                    clearInterval(t);
+                }
+            }, 20)
+        });
+
+        function scrollToContent(position) {
+            window.scrollTo({ top: position, behavior: "smooth" })
+
+        }
+    }
 });

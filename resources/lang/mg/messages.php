@@ -134,6 +134,7 @@ return [
         'modify' => 'Ovaina',
         'delete' => 'Fafao',
     ],
+    'serviceShow' => [],
     'serviceCreate' => [
         'title' => 'Famoronana Serivisy',
         'add_service' => 'Ampidiro ny Serivisy',
@@ -156,6 +157,7 @@ return [
     'serviceList' => [
         'popular_services' => 'Serivisy malaza',
         'book_service' => 'Hamandrika ity serivisy ity',
+        'see_service' => "Momban'ilay servisy",
     ],
     'login' => [
         'title' => 'Fidirana',

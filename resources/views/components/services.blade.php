@@ -9,13 +9,19 @@
                     <h3 class="text-lg max-sm:text-md font-bold z-20">{{ $service->name }}</h3>
                     <p class="text-gray-600 z-20">{{ $service->description }}</p>
                 </div>
-                <div class="flex flex-col justify-end z-20">
+                <div class="w-full flex flex-col justify-end items-start z-20">
                     <p class="max-sm:text-sm text-blue-600 font-semibold mt-2">
                         {{ number_format((float) $service->price, 2) }} €</p>
-                    <a href="{{ route('reservations.create', $service->id) }}"
-                        class="text-blue-500 hover:underline underline-offset-2 transition-all duration-200 ease-in-out mt-2 px-2 inline-block">
-                        {{ __('messages.serviceList.book_service') }}
-                    </a>
+                    <div class="w-full flex flex-row justify-between  space-x-2">
+                        <a href="{{ route('reservations.create', $service->id) }}"
+                            class="text-blue-500 hover:underline underline-offset-2 transition-all duration-200 ease-in-out mt-2  inline-block">
+                            {{ __('messages.serviceList.book_service') }}
+                        </a>
+                        <a href="{{ route('services.show', $service->id) }}"
+                            class="text-blue-500 hover:underline underline-offset-2 transition-all duration-200 ease-in-out mt-2  inline-block">
+                            {{ __('messages.serviceList.see_service') }}
+                        </a>
+                    </div>
                 </div>
             </div>
             @if ($service->image_url)

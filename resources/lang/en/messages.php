@@ -134,6 +134,7 @@ return [
         'modify' => 'Modify',
         'delete' => 'Delete',
     ],
+    'serviceShow' => [],
     'serviceCreate' => [
         'title' => 'Create Service',
         'add_service' => 'Add a Service',
@@ -156,6 +157,7 @@ return [
     'serviceList' => [
         'popular_services' => 'Popular Services',
         'book_service' => 'Book this service',
+        'see_service' => "See the service",
     ],
     'login' => [
         'title' => 'Login',

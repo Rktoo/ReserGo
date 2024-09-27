@@ -23,7 +23,12 @@ class ServiceController extends Controller implements HasMiddleware
         $services = Service::orderBy('created_at', 'desc')->get();
         return view('services.index', compact('services'));
     }
+    public function show($id)
+    {
+        $service = Service::findOrFail($id);
 
+        return view('services.show', compact('service'));
+    }
     public function create()
     {
         return view('services.create');

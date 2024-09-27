@@ -34,8 +34,8 @@
 
     <div
         class="fixed max-[500px]:-bottom-[4.5rem] max-md:-bottom-[8rem] max-lg:-bottom-[12rem]
-         max-xl:-bottom-[14rem]  
-         max-2xl:-bottom-[16rem]  
+         max-xl:-bottom-[16rem]  
+         max-2xl:-bottom-[20rem]  
         2xl:-bottom-[26rem]
 
         -bottom-40 w-full -z-10">

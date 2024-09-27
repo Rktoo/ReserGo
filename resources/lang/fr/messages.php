@@ -64,6 +64,7 @@ return [
         'date' => 'Date',
         'time' => 'Heure',
         'reserved_by' => 'Réservé par',
+        'nothing' => "Aucune réservation",
     ],
     'reservationCreate' => [
         'title' => 'Création réservation',
@@ -176,5 +177,16 @@ return [
         'login_here' => 'Cliquer ici',
         'register_button' => 'Créer un compte',
         'status' => 'Enregistré avec succès',
+    ],
+    "errors" => [
+        '403_title' => '403',
+        '403_message' => 'Oups, vous n\'avez pas la permission d\'accéder à cette page.',
+        '404_title' => '404',
+        '404_message' => 'Oups, la page que vous recherchez est introuvable.',
+        '500_title' => '500',
+        '500_message' => 'Oups, quelque chose s\'est mal passé de notre côté.',
+        'back_home' => 'Retour à la page d\'accueil',
+        'try_again' => 'Réessayez plus tard',
+        'contact_support' => 'Contacter le support',
     ],
 ];

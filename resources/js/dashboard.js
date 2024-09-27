@@ -8,7 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentUrl = "";
 
     switch (window.location.pathname) {
-        case "/dashboard": currentUrl = "dashboard/reservations/"
+        case "/dashboard": currentUrl = "dashboard/reservations/";
+            break;
+        case "/reservations": currentUrl = "reservations/delete/";
             break;
         default: currentUrl = "services/"
             break;

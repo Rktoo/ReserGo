@@ -17,7 +17,7 @@ class ReservationController extends Controller implements HasMiddleware
     public static function middleware(): array
     {
         return [
-            new Middleware(AdminMiddleware::class, only: ["index"])
+            new Middleware(AdminMiddleware::class, only: ["index", "destroy"])
         ];
     }
     public function index()
@@ -103,5 +103,20 @@ class ReservationController extends Controller implements HasMiddleware
         $reservation->save();
 
         return redirect()->route('dashboard.index')->with('success', 'Réservation mise à jour avec succès!');
+    }
+
+
+    // Suppression d'une réservation
+    public function destroy($id)
+    {
+        $reservation = Reservation::findOrFail($id);
+
+        //Autorise uniquement l'admin à faire un delete suite à une demande particulière
+        if (Auth::user()->role === 'admin') {
+            $reservation->delete();
+            return redirect()->route('reservations.index')->with('success', 'Réservation supprimé avec succès.');
+        }
+
+        abort(401);
     }
 }

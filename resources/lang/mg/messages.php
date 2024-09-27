@@ -64,6 +64,7 @@ return [
         'date' => 'Daty',
         'time' => 'Ora',
         'reserved_by' => 'Nomanin\'i',
+        'nothing' => "Tsy misy famandrihana",
     ],
     'reservationCreate' => [
         'title' => 'Famoronana fanamiana',
@@ -176,5 +177,16 @@ return [
         'login_here' => 'Tsindrio eto',
         'register_button' => 'Mametraha kaonty',
         'status' => 'Nisoratra tamim-pahombiazana',
+    ],
+    "errors" => [
+        '403_title' => '403',
+        '403_message' => 'Oay, tsy manana alalana hiditra amin\'ity pejy ity ianao.',
+        '404_title' => '404',
+        '404_message' => 'Oay, tsy hita ilay pejy tadiavinao.',
+        '500_title' => '500',
+        '500_message' => 'Oay, nisy olana teo aminay.',
+        'back_home' => 'Hiverina any amin\'ny pejy fandraisana',
+        'try_again' => 'Andramo indray afaka kelikely',
+        'contact_support' => 'Mifandraisa amin\'ny fanohanana',
     ],
 ];

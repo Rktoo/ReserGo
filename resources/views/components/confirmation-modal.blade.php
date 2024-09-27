@@ -1,4 +1,5 @@
-<div id="confirmation-modal" class="fixed inset-0 bg-gray-600 bg-opacity-75 items-center justify-center hidden">
+<div id="confirmation-modal" class="fixed inset-0 bg-gray-600 bg-opacity-75 items-center justify-center hidden"
+    style="z-index: 200">
     <div class="bg-white p-6 rounded-lg shadow-lg">
         <h2 class="text-xl font-bold mb-4">{{ $title }}</h2>
         <p>{{ $message }}</p>

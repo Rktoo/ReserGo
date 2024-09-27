@@ -64,6 +64,7 @@ return [
         'date' => 'Date',
         'time' => 'Time',
         'reserved_by' => 'Reserved by',
+        'nothing' => "No reservation",
     ],
     'reservationCreate' => [
         'title' => 'Create Reservation',
@@ -176,5 +177,16 @@ return [
         'login_here' => 'Click here',
         'register_button' => 'Create Account',
         'status' => 'Registered successfully',
+    ],
+    "errors" => [
+        '403_title' => '403',
+        '403_message' => 'Oops, you do not have permission to access this page.',
+        '404_title' => '404',
+        '404_message' => 'Oops, the page you are looking for could not be found.',
+        '500_title' => '500',
+        '500_message' => 'Whoops, something went wrong on our end.',
+        'back_home' => 'Back to home page',
+        'try_again' => 'Try again later',
+        'contact_support' => 'Contact support',
     ],
 ];

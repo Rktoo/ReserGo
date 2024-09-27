@@ -38,6 +38,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/reservations/{id}/edit', [ReservationController::class, 'edit'])->name('reservations.edit');
     Route::put('/reservations/{id}', [ReservationController::class, 'update'])->name('reservations.update');
+    Route::delete('/reservations/delete/{id}', [ReservationController::class, 'destroy'])->name('reservations.destroy');
 });
 route::view('/about', 'pages.about')->name('about');
 route::view('/contact', 'pages.contact')->name('contact');

@@ -82,7 +82,7 @@ class UserDashboardController extends Controller
         return redirect('/')->with('success', 'Votre compte a bien été supprimé');
     }
 
-
+    // Suppression d'une réservation
     public function destroy($id)
     {
         $reservation = Reservation::findOrFail($id);

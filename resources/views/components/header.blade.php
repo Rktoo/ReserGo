@@ -8,16 +8,16 @@
             <a href="/" class="ml-4 col-span-1">
                 <h1 class="text-3xl max-sm:text-lg text-center font-semibold mr-4">ReserGo </h1>
             </a>
-            <ul class="flex justify-end items-center space-x-0  mr-2">
+            <ul class="flex justify-end items-baseline space-x-0  mr-2">
                 @auth
                     <li class="py-1 max-sm:px-1  rounded-tl-xl bg-gray-50 hover:bg-white text-gray-800 cursor-pointer">
-                        <a href="{{ route('dashboard.index') }}" class="px-2 max-sm:px-0">Dashboard</a>
+                        <a href="{{ route('dashboard.index') }}" class="px-2 max-sm:px-0 ">Dashboard</a>
                     </li>
-                    <li>
+                    <li class="">
                         <form action="{{ route('logout') }}" method="post">
                             @csrf
                             <button type="submit"
-                                class="p-1 max-sm:px-1 rounded-br-xl bg-red-400 hover:bg-red-500 text-white cursor-pointer">Logout</button>
+                                class=" p-1 max-sm:px-1 pr-2 rounded-br-xl bg-red-400 hover:bg-red-500 text-white cursor-pointer">Logout</button>
 
                         </form>
                     </li>

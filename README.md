@@ -50,13 +50,17 @@ Bienvenue dans le dépôt **ReserGo** ! Ce projet est une application de réserv
    ```bash
    php artisan key:generate
 
-2. **Créer votre fichier d'environnement .env**
+2. **Créer votre fichier d'environnement .env** :
     ```bash
     cp .env.example .env
-3. **Faites le lien du storage vers le dossier public**
+3. **Faites le lien du storage vers le dossier public** :
     ```bash
     php artisan storage:link
-4. **Lancez les migrations et le seeding de la base de données :**
+4. **Copier les images statiques du dossier `public/images/services` vers le dossier `storage/app/public/images/services`  exécutez le script suivant dans votre terminal** :
+    ```bash
+    mkdir -p storage/app/public/images/services
+    cp -r public/images/services/* storage/app/public/images/services/
+5. **Lancer les migrations et le seeding de la base de données :**
     ```bash
    php artisan migrate --seed
 

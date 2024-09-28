@@ -46,20 +46,20 @@ Bienvenue dans le dépôt **ReserGo** ! Ce projet est une application de réserv
     npm install
 
 ## 🔧 Configuration 
-1. **Créer votre clé personnelle** :
+1. **Créer votre fichier d'environnement .env** :
+    ```bash
+    cp .env.example .env
+2. **Créer votre clé personnelle** :
    ```bash
    php artisan key:generate
 
-2. **Créer votre fichier d'environnement .env** :
-    ```bash
-    cp .env.example .env
-3. **Faites le lien du storage vers le dossier public** :
-    ```bash
-    php artisan storage:link
-4. **Copier les images statiques du dossier `public/images/services` vers le dossier `storage/app/public/images/services`  exécutez le script suivant dans votre terminal** :
+3. **Copier les images statiques du dossier `public/images/services` vers le dossier `storage/app/public/images/services`  exécutez le script suivant dans votre terminal** :
     ```bash
     mkdir -p storage/app/public/images/services
     cp -r public/images/services/* storage/app/public/images/services/
+4. **Faites le lien du storage vers le dossier public** :
+    ```bash
+    php artisan storage:link
 5. **Lancer les migrations et le seeding de la base de données :**
     ```bash
    php artisan migrate --seed
@@ -71,7 +71,7 @@ Bienvenue dans le dépôt **ReserGo** ! Ce projet est une application de réserv
 2. **Accéder à l'application dans votre navigateur depuis :**
     ```bash
     http://localhost:8000
-3. **Vous avez un compte administrator prédéfini pour tester les fonctionnalités**
+3. **Vous avez un compte administrateur prédéfini pour tester les fonctionnalités**
     email : admin@test.com
     password : 12345678
 ## 👨‍💻 Crédits

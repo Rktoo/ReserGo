@@ -19,15 +19,7 @@
     @include('components.header')
     <div class="container mx-auto mb-4 px-4 flex-1 z-20">
         <main class="master_ max-w-6xl w-full mx-auto py-6 sm:px-6 lg:px-8">
-            @if ($errors->any() && url()->current() === '/')
-                <div class="mb-4 text-red-500">
-                    <ul id="messages_">
-                        @foreach ($errors->all() as $error)
-                            <li class="text-center">{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+
             @yield('content')
         </main>
     </div>

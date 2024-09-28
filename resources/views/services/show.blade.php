@@ -18,7 +18,7 @@
                     {{ $service->description }}
                 </p>
 
-                <div class="bg-[#34BDFF]50 p-4 rounded-lg mb-6">
+                <div class="bg-blue-100 p-4 rounded-lg mb-6">
                     <h2 class="text-xl font-semibold text-[#34BDFF] mb-2">{{ __('messages.serviceShow.advantages') }}</h2>
                     <ul class="list-disc pl-5 text-gray-700">
                         <li>{{ __('messages.serviceShow.advantage_one') }}</li>
@@ -45,7 +45,7 @@
                 </div>
 
                 {{-- Témoignages clients --}}
-                <div class="bg-[#34BDFF]100 p-6 rounded-lg shadow-lg mb-6">
+                <div class="bg-blue-100 p-6 rounded-lg shadow-lg mb-6">
                     <h2 class="text-xl font-semibold text-[#34BDFF] mb-4">{{ __('messages.serviceShow.testimonials') }}
                     </h2>
                     <div class="space-y-4">

@@ -42,7 +42,7 @@
                 <div class="flex gap-1">
                     <p class="text-gray-800">{{ __('messages.login.no_account') }}</p>
                     <a href="{{ route('register') }}"
-                        class="text-[#34BDFF]400 hover:underline hover:underline-offset-2 transition-all duration-200 ease-in-out">{{ __('messages.login.register_here') }}</a>
+                        class="text-blue-400 hover:underline hover:underline-offset-2 transition-all duration-200 ease-in-out">{{ __('messages.login.register_here') }}</a>
                 </div>
             </div>
             <div class="mt-2 mb-2">

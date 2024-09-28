@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         y: 0,
                         duration: 0.7,
                         stagger: 0.5,
-                        ease: "power2.out"
+                        ease: "power4.out",
                     }
                 );
             });

@@ -63,7 +63,7 @@
                 <div class="mb-1 flex justify-end w-full px-6 gap-1">
                     <p class="text-gray-800">{{ __('messages.register.already_have_account') }}</p>
                     <a href="{{ route('login') }}"
-                        class="text-[#34BDFF]400 hover:underline hover:underline-offset-2 transition-all duration-200 ease-in-out">{{ __('messages.register.login_here') }}</a>
+                        class="text-blue-400 hover:underline hover:underline-offset-2 transition-all duration-200 ease-in-out">{{ __('messages.register.login_here') }}</a>
                 </div>
             </div>
             <div class="mt-2 mb-2">

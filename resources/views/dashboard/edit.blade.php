@@ -3,7 +3,15 @@
 @section('content')
     <div class="container mx-auto my-8 max-w-lg">
         <h2 class="text-2xl font-bold mb-6 text-center">{{ __('messages.dashboardEdit.account_settings') }}</h2>
-
+        @if ($errors->any())
+            <div class="mb-4 text-red-500">
+                <ul id="messages_">
+                    @foreach ($errors->all() as $error)
+                        <li class="text-center">{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <!-- Formulaire pour la mise à jour du nom -->
         <section>
             <div class="m-4">
@@ -12,7 +20,8 @@
                     <span class="ml-2 text-gray-700 font-medium">{{ __('messages.dashboardEdit.change_name') }}</span>
                 </label>
             </div>
-            <form action="{{ route('dashboard.updateName') }}" method="POST" class="bg-white shadow-md rounded-lg p-6 mb-6">
+            <form action="{{ route('dashboard.updateName') }}" method="POST"
+                class="bg-white shadow-md rounded-lg p-6 mb-6">
                 @csrf
                 @method('PUT')
 

@@ -15,11 +15,11 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8">
-            <div class="bg-blue-50 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div class="bg-[#34BDFF]50 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                 <h2 class="text-xl font-semibold text-[#34BDFF] mb-3">@lang('messages.about.feature_title_1')</h2>
                 <p class="text-gray-600">@lang('messages.about.feature_description_1')</p>
             </div>
-            <div class="bg-blue-50 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div class="bg-[#34BDFF]50 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                 <h2 class="text-xl font-semibold text-[#34BDFF] mb-3">@lang('messages.about.feature_title_2')</h2>
                 <p class="text-gray-600">@lang('messages.about.feature_description_2')</p>
             </div>

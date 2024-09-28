@@ -10,7 +10,7 @@
                     <p class="text-gray-600 z-20">{{ $service->description }}</p>
                 </div>
                 <div class="w-full h-full flex flex-col justify-end items-start gap-2 z-20">
-                    <p class="max-sm:text-sm text-blue-600 font-semibold mt-2">
+                    <p class="max-sm:text-sm text-[#34BDFF] font-semibold mt-2">
                         {{ number_format((float) $service->price, 2) }} €</p>
                     <div class="w-full grid grid-cols-2 gap-1">
                         <a href="{{ route('reservations.create', $service->id) }}"
@@ -49,7 +49,7 @@
             </div>
             @if ($service->image_url)
                 <a href="{{ route('reservations.create', $service->id) }}"
-                    class="text-blue-500 hover:underline underline-offset-2 transition-all duration-200 ease-in-out mt-2 px-2 inline-block">
+                    class="text-[#34BDFF] hover:underline underline-offset-2 transition-all duration-200 ease-in-out mt-2 px-2 inline-block">
                     {{-- <img src="{{ asset('storage' . $service->image_url) }}" alt="Service image"
                         class="hidden group-hover:flex mt-2 max-w-[350px] max-h-[350px] rounded" /> --}}
                 </a>

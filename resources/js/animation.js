@@ -108,6 +108,19 @@ document.addEventListener("DOMContentLoaded", () => {
                         i += 50;
                     } else {
                         i += 100;
+                        scrollBtn.classList.add("transform");
+                        scrollBtn.classList.add("-translate-y-40");
+                        setTimeout(() => {
+                            scrollBtn.classList.add("hidden");
+                        }, 300);
+                        setTimeout(() => {
+                            scrollBtn.classList.remove("hidden");
+                        }, 2700);
+                        setTimeout(() => {
+                            scrollBtn.classList.remove("transform");
+                            scrollBtn.classList.remove("-translate-y-40");
+                        }, 3000);
+
                     }
                 } else {
                     clearInterval(t);

@@ -13,11 +13,11 @@
             <p class="mb-2"><span class="font-semibold">{{ __('messages.dashboardShow.client_email') }}</span>
                 {{ $reservation->user->email }}</p>
             <a href="{{ route('reservations.edit', $reservation->id) }}"
-                class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-md">{{ __('messages.dashboardShow.edit') }}</a>
+                class="text-white bg-[#34BDFF] hover:bg-[#34BDFF] px-4 py-2 rounded-md">{{ __('messages.dashboardShow.edit') }}</a>
         </div>
         <div class="mt-6">
             <a href="{{ route('dashboard.index', $reservation->id) }}"
-                class="text-blue-500 hover:underline">{{ __('messages.dashboardShow.back_to_reservations') }}</a>
+                class="text-[#34BDFF] hover:underline">{{ __('messages.dashboardShow.back_to_reservations') }}</a>
         </div>
     </div>
 @endsection

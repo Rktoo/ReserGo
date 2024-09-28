@@ -28,7 +28,7 @@
                     </div>
                     <div class="flex text-xs">
                         <a href="{{ route('dashboard.reservations.show', $reservation->id) }}"
-                            class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-l-md">{{ __('messages.dashboardIndex.details') }}</a>
+                            class="text-white bg-[#34BDFF] hover:bg-[#34BDFF] px-4 py-2 rounded-l-md">{{ __('messages.dashboardIndex.details') }}</a>
 
                         <button type="button" id="annuler_"
                             class="text-white bg-red-500 hover:bg-red-600 px-4 py-2 rounded-r-md"
@@ -50,7 +50,7 @@
                     </div>
                     <div>
                         <a href="{{ route('dashboard.reservations.show', $reservation->id) }}"
-                            class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-l-md">{{ __('messages.dashboardIndex.details') }}</a>
+                            class="text-white bg-[#34BDFF] hover:bg-[#34BDFF] px-4 py-2 rounded-l-md">{{ __('messages.dashboardIndex.details') }}</a>
                     </div>
                 </li>
             @empty

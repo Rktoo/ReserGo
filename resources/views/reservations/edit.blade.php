@@ -21,11 +21,11 @@
                 @enderror
             </div>
             <button type="submit"
-                class="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 transition duration-200">{{ __('messages.reservationEdit.submit') }}</button>
+                class="w-full bg-[#34BDFF] text-white font-semibold py-2 rounded-lg hover:bg-[#34BDFF] transition duration-200">{{ __('messages.reservationEdit.submit') }}</button>
         </form>
         <div class="mt-4">
             <a href="{{ route('dashboard.index') }}"
-                class="text-blue-500 hover:underline">{{ __('messages.reservationEdit.back_to_reservations') }}</a>
+                class="text-[#34BDFF] hover:underline">{{ __('messages.reservationEdit.back_to_reservations') }}</a>
         </div>
     </div>
 @endsection

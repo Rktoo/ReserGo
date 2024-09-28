@@ -16,7 +16,7 @@
                 <label for="name"
                     class="block text-sm font-medium text-gray-700">{{ __('messages.register.name') }}</label>
                 <input id="name" type="text" name="name" value="{{ old('name') }}" autofocus
-                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-[#34BDFF] focus:border-[#34BDFF]"
                     placeholder="{{ __('messages.register.name') }}">
                 <span class="text-red-400 text-sm"></span>
                 @error('name')
@@ -27,7 +27,7 @@
                 <label for="email"
                     class="block text-sm font-medium text-gray-700">{{ __('messages.register.email') }}</label>
                 <input id="email" type="email" name="email" value="{{ old('email') }}" autofocus
-                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-[#34BDFF] focus:border-[#34BDFF]"
                     placeholder="{{ __('messages.register.email') }}">
                 <span class="text-red-400 text-sm"></span>
                 @error('email')
@@ -39,7 +39,7 @@
                 <label for="password"
                     class="block text-sm font-medium text-gray-700">{{ __('messages.register.password') }}</label>
                 <input id="password" type="password" name="password"
-                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-[#34BDFF] focus:border-[#34BDFF]"
                     placeholder="{{ __('messages.register.password') }}">
                 <span class="text-red-400 text-sm"></span>
                 @error('password')
@@ -51,7 +51,7 @@
                 <label for="password_confirmation"
                     class="block text-sm font-medium text-gray-700">{{ __('messages.register.password_confirmation') }}</label>
                 <input id="password_confirmation" type="password" name="password_confirmation"
-                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-[#34BDFF] focus:border-[#34BDFF]"
                     placeholder="{{ __('messages.register.password_confirmation') }}">
                 <span class="text-red-400 text-sm"></span>
                 @error('password_confirmation')
@@ -63,7 +63,7 @@
                 <div class="mb-1 flex justify-end w-full px-6 gap-1">
                     <p class="text-gray-800">{{ __('messages.register.already_have_account') }}</p>
                     <a href="{{ route('login') }}"
-                        class="text-blue-400 hover:underline hover:underline-offset-2 transition-all duration-200 ease-in-out">{{ __('messages.register.login_here') }}</a>
+                        class="text-[#34BDFF]400 hover:underline hover:underline-offset-2 transition-all duration-200 ease-in-out">{{ __('messages.register.login_here') }}</a>
                 </div>
             </div>
             <div class="mt-2 mb-2">

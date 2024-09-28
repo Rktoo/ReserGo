@@ -11,7 +11,7 @@
             <p class="subtitle_ max-sm:text-center max-sm:text-sm text-gray-700 opacity-0">@lang('messages.home.subtitle')</p>
         </div>
 
-        <div class="max-w-3xl mx-auto mb-10 p-4 rounded-lg text-center  bg-white shadow-sm">
+        <div class="max-w-3xl mx-auto mb-10 p-4 rounded-lg text-center  bg-white shadow-sm z-50 overflow-hidden">
             <h2 class="text-2xl max-sm:text-xl font-semibold text-black mb-4">@lang('messages.home.discover_services')</h2>
             <p class="max-sm:text-start text-md max-sm:text-sm text-gray-600 mb-4">@lang('messages.home.description')</p>
             <p class="max-sm:text-sm text-gray-600 max-sm:mb-2">@lang('messages.home.popular_services')</p>
@@ -40,8 +40,9 @@
             </ul>
             <p class="max-sm:text-sm text-gray-600">@lang('messages.home.call_to_action')</p>
         </div>
-        <div class="w-full flex justify-center items-center mb-6">
-            <div class=" w-12 h-12 rounded-full bg-white/50 hover:bg-white active:bg-white cursor-pointer" id="scrollOver_">
+        <div class="w-full flex justify-center items-center mb-6 ">
+            <div class=" w-12 h-12 rounded-full bg-white/50 hover:bg-white active:bg-white cursor-pointer transition-all duration-500 ease-in-out z-10"
+                id="scrollOver_">
 
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="black" aria-hidden="true"
                     data-slot="icon">

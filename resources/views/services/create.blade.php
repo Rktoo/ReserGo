@@ -42,8 +42,8 @@
                            file:mr-4 file:py-2 file:px-4
                            file:rounded-md file:border-0
                            file:text-sm file:font-semibold
-                           file:bg-blue-50 file:text-[#34BDFF]
-                           hover:file:bg-blue-100" />
+                           file:bg-[#34BDFF]50 file:text-[#34BDFF]
+                           hover:file:bg-[#34BDFF]100" />
                 @error('image')
                     <span class="text-red-500 text-sm">{{ $message }}</span>
                 @enderror

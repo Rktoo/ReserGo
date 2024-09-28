@@ -23,7 +23,7 @@
                         <div
                             class="flex flex-row max-sm:flex-col justify-start max-sm:justify-end max-sm:items-end items-center gap-1">
                             <p class="text-sm font-thin">@lang('messages.reservationIndex.reserved_by') </p>
-                            <p class="text-nowrap text-blue-400 ">{{ $reservation->user->name }}</p>
+                            <p class="text-nowrap text-[#34BDFF]400 ">{{ $reservation->user->name }}</p>
                         </div>
                         <div class="flex text-xs ml-4">
                             <a href="{{ route('reservations.edit', $reservation->service->id) }}"

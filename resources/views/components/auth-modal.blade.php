@@ -1,4 +1,5 @@
-<div id="authModal" class="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-75">
+<div id="authModal"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-75 backdrop-blur-sm">
     <div class="bg-white p-5 rounded shadow-lg max-w-md mx-auto text-center">
         <h2 class="text-lg font-semibold mb-4">{{ __('messages.authModal.title') }}</h2>
         <p class="mb-4">{{ __('messages.authModal.description') }}</p>

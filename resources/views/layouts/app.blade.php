@@ -33,11 +33,10 @@
     </div>
 
     <div
-        class="fixed max-[500px]:-bottom-[4.5rem] max-md:-bottom-[8rem] max-lg:-bottom-[12rem]
+        class="fixed max-[500px]:-bottom-[4.5rem] max-md:-bottom-[9rem] max-lg:-bottom-[12rem]
          max-xl:-bottom-[16rem]  
-         max-2xl:-bottom-[20rem]  
-        2xl:-bottom-[26rem]
-
+         max-2xl:-bottom-[14rem]  
+        2xl:-bottom-[22rem]
         -bottom-40 w-full -z-10">
         @include('components.animations.vague', [
             'height' => 800,

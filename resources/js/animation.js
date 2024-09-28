@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const subtitle_ = document.querySelector(".subtitle_");
     const scrollBtn = document.querySelector("#scrollOver_");
     const sectionList = document.querySelector("#section_");
+    let isScrolling = false;
 
     if (title_ && subtitle_) {
         gsap.fromTo(title_,
@@ -56,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (serviceCards) {
+            if (isScrolling) return;
             animationOnScroll(serviceCards, (el) => {
                 gsap.fromTo(el,
                     { opacity: 0, y: 40 },
@@ -92,20 +94,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Scroll
     if (scrollBtn && sectionList) {
-        scrollBtn.addEventListener("click", () => {
-            let i = 100;
-            const t = setInterval(() => {
+        scrollBtn.addEventListener("click", (event) => {
+            let i = 0;
+            isScrolling = true;
 
+            gsap.globalTimeline.pause();
+            const t = setInterval(() => {
                 if (i < window.screen.availHeight - 90) {
                     scrollToContent(i)
-                    i += 100;
+                    if (i < 200) {
+                        i += 25;
+                    } else if (i < 300) {
+                        i += 50;
+                    } else {
+                        i += 100;
+                    }
                 } else {
-                    return;
+                    clearInterval(t);
+                    isScrolling = false;
+                    gsap.globalTimeline.resume();
                 }
 
-                return () => {
-                    clearInterval(t);
-                }
             }, 20)
         });
 

@@ -112,10 +112,14 @@ document.addEventListener("DOMContentLoaded", () => {
                         scrollBtn.classList.add("-translate-y-40");
                         setTimeout(() => {
                             scrollBtn.classList.add("hidden");
+                            scrollBtn.classList.add("opacity-0");
                         }, 300);
                         setTimeout(() => {
                             scrollBtn.classList.remove("hidden");
                         }, 2700);
+                        setTimeout(() => {
+                            scrollBtn.classList.add("opacity-100");
+                        }, 3000);
                         setTimeout(() => {
                             scrollBtn.classList.remove("transform");
                             scrollBtn.classList.remove("-translate-y-40");

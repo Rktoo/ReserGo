@@ -65,13 +65,16 @@ Bienvenue dans le dépôt **ReserGo** ! Ce projet est une application de réserv
    php artisan migrate --seed
 
 ## 🚀 Utilisation
-1. **Lancer le serveur de développement :**
+1. **Lancer Vite:**
+    ```bash
+    npm run dev
+3. **Lancer le serveur de développement :**
     ```bash
     php artisan serve
-2. **Accéder à l'application dans votre navigateur depuis :**
+4. **Accéder à l'application dans votre navigateur depuis :**
     ```bash
     http://localhost:8000
-3. **Vous avez un compte administrateur prédéfini pour tester les fonctionnalités**
+5. **Vous avez un compte administrateur prédéfini pour tester les fonctionnalités**
     email : admin@test.com
     password : 12345678
 ## 👨‍💻 Crédits
